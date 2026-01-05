@@ -7,19 +7,30 @@
 </head>
 <body>
 
-  <!-- ナビゲーションバー -->
-  <header class="nav">
-    <div class="nav-left">
-      <img src="/assets/img/logo.png" alt="企業ロゴ" class="logo">
-    </div>
+   <!-- ナビゲーションバー -->
+ <header class="nav">
+  <!-- 左：ロゴ -->
+  <div class="nav-left">
+    <img src="/assets/img/logo.png" alt="企業ロゴ" class="logo">
+  </div>
 
-    <nav class="nav-right">
+  <!-- 右：ナビリンク＋検索 -->
+  <div class="nav-right">
+    <nav class="nav-links">
       <a href="/index.html">Home</a>
       <a href="/staff.html">Staff</a>
       <a href="/individual.html">Individual</a>
       <a href="/archive.html">Archive</a>
     </nav>
-  </header>
+
+    <input
+      type="text"
+      class="nav-search"
+      placeholder="サイト内検索"
+    >
+  </div>
+</header>
+
 
   <!-- メインコンテンツ -->
   <main class="page">
