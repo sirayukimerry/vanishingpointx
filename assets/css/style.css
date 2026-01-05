@@ -5,12 +5,15 @@
   justify-content: space-between;
   background: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
+  height: 56px;
+  padding: 0 20px;
 }
 
 /* ロゴ */
 .nav-logo {
-  height: 40px; /* 大きさはここで調整 */
+  height: 32px;  /* 大きさはここで調整 */
+  width: auto;
+  max-height: 100%;
 }
 
 /* メニュー */
@@ -19,6 +22,8 @@
   text-decoration: none;
   color: #000;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 .nav-center a:hover {
