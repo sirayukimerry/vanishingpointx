@@ -1,37 +1,30 @@
-/* ナビバー */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-
+/* ナビバー全体 */
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  background-color: #111;
-  border-bottom: 1px solid #222;
-  padding: 0 20px;
-  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
 }
 
-/* 左：ロゴ */
-.nav-left {
-  display: flex;
-  align-items: center;
+/* ロゴ */
+.nav-logo {
+  height: 40px; /* 大きさはここで調整 */
 }
 
-.logo {
-  height: 36px;
+/* メニュー */
+.nav-center a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
 }
 
-/* 右：リンク＋検索 */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.nav-center a:hover {
+  text-decoration: underline;
 }
+
 
 .nav-links a {
   color: #ccc;
