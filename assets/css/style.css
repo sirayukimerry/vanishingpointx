@@ -1,11 +1,3 @@
-/* 全体 */
-body {
-  margin: 0;
-  background-color: #0b0b0b;
-  color: #e0e0e0;
-  font-family: "Yu Gothic", sans-serif;
-}
-
 /* ナビバー */
 .nav {
   position: fixed;
@@ -25,23 +17,53 @@ body {
 }
 
 /* 左：ロゴ */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   height: 36px;
 }
 
-/* 右：リンク */
-.nav-right a {
+/* 右：リンク＋検索 */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
   color: #ccc;
   text-decoration: none;
-  margin-left: 20px;
+  margin-right: 14px;
   font-size: 14px;
 }
 
-.nav-right a:hover {
+.nav-links a:hover {
   color: #fff;
 }
 
-/* ページ本文（ナビに隠れないように） */
+/* 検索窓 */
+.nav-search {
+  background: #0f0f0f;
+  color: #eee;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  font-size: 13px;
+  width: 160px;
+}
+
+.nav-search::placeholder {
+  color: #666;
+}
+
+.nav-search:focus {
+  outline: none;
+  border-color: #666;
+}
+
+/* 本文 */
 .page {
   padding: 100px 20px 20px;
 }
