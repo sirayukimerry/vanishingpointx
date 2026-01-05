@@ -1,23 +1,47 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>記録検索システム</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
+/* 全体 */
+body {
+  margin: 0;
+  background-color: #0b0b0b;
+  color: #e0e0e0;
+  font-family: "Yu Gothic", sans-serif;
+}
 
-  <!-- 右上の検索窓 -->
-  <div class="search-box">
-    <input type="text" placeholder="記録を検索">
-  </div>
+/* ナビバー */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
 
-  <!-- 情報表示エリア -->
-  <main class="content">
-    <p class="hint">
-      記録番号、または人物名を入力してください。
-    </p>
-  </main>
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-</body>
-</html>
+  background-color: #111;
+  border-bottom: 1px solid #222;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+/* 左：ロゴ */
+.logo {
+  height: 36px;
+}
+
+/* 右：リンク */
+.nav-right a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.nav-right a:hover {
+  color: #fff;
+}
+
+/* ページ本文（ナビに隠れないように） */
+.page {
+  padding: 100px 20px 20px;
+}
