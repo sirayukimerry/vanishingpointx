@@ -1,4 +1,43 @@
+/* 全体 */
 body {
-  background: #000;
+  margin: 0;
+  background-color: #0b0b0b;
+  color: #dcdcdc;
+  font-family: "Yu Gothic", sans-serif;
+  height: 100vh;
+}
+
+/* 右上検索窓 */
+.search-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.search-box input {
+  background: #111;
   color: #eee;
+  border: 1px solid #444;
+  padding: 8px 12px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.search-box input::placeholder {
+  color: #666;
+}
+
+/* 中央の情報エリア */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* 案内文 */
+.hint {
+  color: #555;
+  font-size: 14px;
 }
