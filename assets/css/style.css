@@ -22,8 +22,6 @@
   text-decoration: none;
   color: #000;
   font-weight: 500;
-  display: flex;
-  align-items: center;
 }
 
 .nav-center a:hover {
@@ -31,16 +29,6 @@
 }
 
 
-.nav-links a {
-  color: #ccc;
-  text-decoration: none;
-  margin-right: 14px;
-  font-size: 14px;
-}
-
-.nav-links a:hover {
-  color: #fff;
-}
 
 /* 検索窓 */
 .nav-search {
