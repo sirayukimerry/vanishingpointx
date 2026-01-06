@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>職員記録｜レダ・サラソヤ</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ナビバー（全ページ共通） -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="../assets/img/logo.png" class="nav-logo">
+    </div>
+
+    <nav class="nav-center">
+      <a href="../index.html">ホーム</a>
+      <a href="../staff.html">職員照会</a>
+      <a href="../archive.html">アーカイブ</a>
+      <a href="../individual.html">マイページ</a>
+    </nav>
+
+    <input type="text" class="nav-search" placeholder="キーワードを検索">
+  </header>
+
+  <!-- 本文 -->
+  <main class="page">
+
+    <h1 class="record-title">職員記録：レダ・サラソヤ</h1>
+    <p class="record-note">
+      以下の文書は、ARA内部で保管されている個人提出資料の写しである。
+    </p>
+
+    <!-- PDF表示エリア -->
+    <div class="pdf-frame">
+      <iframe
+        src="../assets/pdf/leda_resume.pdf"
+        width="100%"
+        height="700"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </main>
+
+</body>
+</html>
