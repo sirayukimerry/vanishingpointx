@@ -4,21 +4,19 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 56px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  height: 56px;
-  padding: 0 24px;
+  padding: 0 16px;
+  box-sizing: border-box;
 
-  background: rgba(245, 245, 245, 0.95);
+  background: rgba(245,245,245,0.95);
   backdrop-filter: blur(6px);
-
   border-bottom: 1px solid #e0e0e0;
-  z-index: 1000;
 }
-
 
 /* ロゴ */
 .nav-logo {
@@ -31,13 +29,17 @@
 }
 
 /* メニュー */
+.nav-center {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .nav-center a {
-  position: relative;
-  margin: 0 16px;
-  text-decoration: none;
+  margin: 0 12px;
+  font-size: 13px;
   color: #222;
-  font-size: 14px;
-  letter-spacing: 0.05em;
+  text-decoration: none;
 }
 
 /* ホバー時の細い下線 */
