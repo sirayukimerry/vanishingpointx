@@ -2,41 +2,61 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>◯◯プロダクション</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>職員商会｜ARA 超常現象捜査機関</title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Fonts（すでに他ページで使ってるなら同じでOK） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-   <!-- ナビゲーションバー -->
-<header class="navbar">
-  <div class="nav-left">
-    <img src="assets/img/logo.png" alt="ARA 超常現象捜査機関 ロゴ" class="nav-logo">
-  </div>
+  <!-- ナビゲーションバー（他ページと同じ） -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="assets/img/logo.png" alt="ARA 超常現象捜査機関 ロゴ" class="nav-logo">
+    </div>
 
-  <nav class="nav-center">
-    <a href="index.html">ホーム</a>
-    <a href="staff.html">スタッフ一覧</a>
-    <a href="profile.html">個人ページ</a>
-    <a href="archive.html">アーカイブ</a>
-  </nav>
-</header>
+    <nav class="nav-center">
+      <a href="index.html">ホーム</a>
+      <a href="staff.html">スタッフ一覧</a>
+      <a href="profile.html">個人ページ</a>
+      <a href="archive.html" class="active">アーカイブ</a>
+    </nav>
+  </header>
 
+  <!-- 本文 -->
+  <main class="page">
 
-    <input
-      type="text"
-      class="nav-search"
-      placeholder="サイト内検索"
-    >
-  </div>
-</header>
+    <h1>記録アーカイブ</h1>
 
+    <section class="archive-list">
+      <ul>
+        <li>
+          <a href="assets/pdf/ARA_resume_haruna.pdf" target="_blank">
+            ハルナ・キノサキ
+          </a>
+        </li>
 
-  <!-- メインコンテンツ -->
- <main class="page">
-  <h1>スタッフ一覧</h1>
-  <p>現在公開可能なスタッフ情報は以下の通りです。</p>
-</main>
+        <li>
+          <a href="assets/pdf/ARA_resume_kinozaki.pdf" target="_blank">
+            キノザキ・ユウ
+          </a>
+        </li>
 
+        <li>
+          <a href="assets/pdf/ARA_resume_unknown.pdf" target="_blank">
+            記録番号：ARA-019
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
 
 </body>
 </html>
