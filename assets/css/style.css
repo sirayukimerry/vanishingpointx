@@ -178,6 +178,60 @@
   color: #777;
 }
 
+/* =========================
+   マイページ警告
+   ========================= */
+
+.warning-page {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.warning-title {
+  font-size: 18px;
+  margin-bottom: 24px;
+  letter-spacing: 0.06em;
+}
+
+.warning-text {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.warning-note {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 36px;
+}
+
+.warning-red {
+  color: #b00000;          /* 落ち着いた赤 */
+  font-weight: 600;
+}
+
+.warning-action {
+  margin-top: 24px;
+}
+
+.warning-button {
+  display: inline-block;
+  padding: 10px 24px;
+
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+
+  color: #fff;
+  background: #111;
+  border: 1px solid #333;
+}
+
+.warning-button:hover {
+  background: #000;
+}
+
 
 /* =========================
    本文
