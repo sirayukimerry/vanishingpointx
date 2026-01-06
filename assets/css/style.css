@@ -1,4 +1,7 @@
-/* ナビバー全体 */
+/* =========================
+   ナビバー全体
+   ========================= */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -16,9 +19,21 @@
   background: rgba(245,245,245,0.95);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
 }
 
-/* ロゴ */
+/* 左・中央・右 共通 */
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   ロゴ
+   ========================= */
+
 .nav-logo {
   height: 40px;
   width: auto;
@@ -26,29 +41,23 @@
   object-fit: contain;
 }
 
-}
+/* =========================
+   メニュー
+   ========================= */
 
-/* メニュー */
 .nav-center {
-  display: flex;
-  align-items: center;
   white-space: nowrap;
 }
 
 .nav-center a {
   margin: 0 12px;
-  text-decoration: none;
   font-family: "Inter", "Noto Sans JP", system-ui, sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.08em;
   color: #222;
   text-decoration: none;
-  text-transform: uppercase; /* 英字だけ効く */
-}
-
-/* ホバー時の影 */
-.nav-center a {
+  text-transform: uppercase;
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
@@ -57,26 +66,31 @@
   text-shadow: 0 0 6px rgba(0,0,0,0.25);
 }
 
+/* =========================
+   検索窓（右端）
+   ========================= */
 
-
-
-/* 検索窓 */
 .nav-search {
-  background: #0f0f0f;
-  color: #eee;
-  border: 1px solid #333;
-  padding: 6px 10px;
-  font-size: 13px;
   width: 160px;
+  padding: 6px 10px;
+
+  font-family: "Inter", "Noto Sans JP", system-ui, sans-serif;
+  font-size: 13px;
+
+  background: #f5f5f5;
+  color: #111;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .nav-search::placeholder {
-  color: #666;
+  color: #777;
 }
 
 .nav-search:focus {
   outline: none;
-  border-color: #666;
+  border-color: #888;
 }
 
 /* =========================
@@ -117,14 +131,18 @@
   text-decoration: underline;
 }
 
+/* =========================
+   本文
+   ========================= */
 
-/* 本文 */
 .page {
   padding: 100px 20px 20px;
 }
 
+/* =========================
+   body（一番下）
+   ========================= */
 
-/* 一番下に */
 body {
   margin: 0;
   padding-top: 72px;
@@ -134,4 +152,3 @@ body {
   line-height: 1.8;
   color: #111;
 }
-
