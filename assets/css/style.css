@@ -79,6 +79,45 @@
   border-color: #666;
 }
 
+/* =========================
+   職員一覧（individuals.html）
+   ========================= */
+
+.team {
+  margin-bottom: 40px;
+}
+
+.team h2 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.member-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.member-list li {
+  margin-bottom: 10px;
+}
+
+.member-list a {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: #111;
+}
+
+.member-list a:hover {
+  text-decoration: underline;
+}
+
+
 /* 本文 */
 .page {
   padding: 100px 20px 20px;
