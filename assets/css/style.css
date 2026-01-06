@@ -232,6 +232,69 @@
   background: #000;
 }
 
+/* =========================
+   マイページ キャラクター一覧
+   ========================= */
+
+.mypage-title {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  margin-bottom: 48px;
+}
+
+/* グリッド */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* カード全体 */
+.character-card {
+  text-decoration: none;
+  color: #111;
+  text-align: center;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ホバー時 */
+.character-card:hover {
+  transform: translateY(-6px);
+}
+
+/* フレーム */
+.character-frame {
+  border: 1px solid #ccc;
+  padding: 8px;
+  background: #fff;
+
+  overflow: hidden;
+}
+
+/* 画像 */
+.character-frame img {
+  width: 100%;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+/* 画像ズーム */
+.character-card:hover img {
+  transform: scale(1.05);
+}
+
+/* 名前 */
+.character-name {
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+}
+
 
 /* =========================
    本文
