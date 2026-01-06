@@ -268,20 +268,23 @@
 
 /* フレーム */
 .character-frame {
-  border: 1px solid #ccc;
-  padding: 8px;
-  background: #fff;
+  position: relative;
 
-  overflow: hidden;
+  background-image: url("assets/img/frame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 16px;        /* ← フレームの太さに合わせて調整 */
 }
+
 
 /* 画像 */
 .character-frame img {
   width: 100%;
   display: block;
-
-  transition: transform 0.4s ease;
 }
+
 
 /* 画像ズーム */
 .character-card:hover img {
