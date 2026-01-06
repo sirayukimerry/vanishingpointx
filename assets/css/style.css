@@ -81,7 +81,7 @@
   color: #eaeaea;        /* 入力文字は薄い白 */
 
   border: 1px solid #333;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .nav-search::placeholder {
