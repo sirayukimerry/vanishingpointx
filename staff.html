@@ -16,18 +16,30 @@
 <body>
 
   <!-- ナビゲーションバー（他ページと同じ） -->
-  <header class="navbar">
-    <div class="nav-left">
-      <img src="assets/img/logo.png" alt="ARA 超常現象捜査機関 ロゴ" class="nav-logo">
-    </div>
+<header class="navbar">
+  <!-- 左：ロゴ -->
+  <div class="nav-left">
+    <img src="assets/img/logo.png" alt="ARA 超常現象捜査機関 ロゴ" class="nav-logo">
+  </div>
 
-    <nav class="nav-center">
-      <a href="index.html">ホーム</a>
-      <a href="staff.html">職員照会</a>
-      <a href="individual.html">マイページ</a>
-      <a href="archive.html" class="active">アーカイブ</a>
-    </nav>
-  </header>
+  <!-- 中央：メニュー -->
+  <nav class="nav-center">
+    <a href="index.html">ホーム</a>
+    <a href="staff.html">職員照会</a>
+    <a href="archive.html">アーカイブ</a>
+    <a href="individual.html">マイページ</a>
+  </nav>
+
+  <!-- 右：検索バー -->
+  <div class="nav-right">
+    <input
+      type="search"
+      class="nav-search"
+      placeholder="キーワードを検索"
+    >
+  </div>
+</header>
+
 
   <!-- 本文 -->
   <main class="page">
