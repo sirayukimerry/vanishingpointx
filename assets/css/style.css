@@ -1,13 +1,24 @@
 /* ナビバー全体 */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+
   height: 56px;
-  padding: 0 20px;
+  padding: 0 24px;
+
+  background: rgba(245, 245, 245, 0.95);
+  backdrop-filter: blur(6px);
+
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
 }
+
 
 /* ロゴ */
 .nav-logo {
@@ -21,15 +32,30 @@
 
 /* メニュー */
 .nav-center a {
-  margin: 0 15px;
+  position: relative;
+  margin: 0 16px;
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
+  color: #222;
+  font-size: 14px;
+  letter-spacing: 0.05em;
 }
 
-.nav-center a:hover {
-  text-decoration: underline;
+/* ホバー時の細い下線 */
+.nav-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.25s ease;
 }
+
+.nav-center a:hover::after {
+  width: 100%;
+}
+
 
 
 
@@ -55,4 +81,10 @@
 /* 本文 */
 .page {
   padding: 100px 20px 20px;
+}
+
+
+/* 一番下に */
+body {
+  padding-top: 72px;
 }
