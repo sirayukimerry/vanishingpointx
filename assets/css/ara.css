@@ -1,1 +1,120 @@
+/* =========================
+   ARA 企業サイト専用CSS
+   ========================= */
+
+body {
+  background: #f7f7f7;
+  color: #111;
+}
+
+/* ヒーローエリア */
+.ara-hero {
+  height: 60vh;
+  min-height: 420px;
+
+  background: #111; /* 後で画像に差し替え */
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.ara-hero h1 {
+  font-size: 32px;
+  letter-spacing: 0.25em;
+  line-height: 1.6;
+}
+
+/* セクション共通 */
+.ara-section {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.ara-section h2 {
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  margin-bottom: 24px;
+}
+
+.ara-section p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* TOPICS */
+.ara-topics {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.ara-topics li {
+  margin-bottom: 8px;
+}
+
+/* 注意文 */
+.ara-warning {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ポータルボタン */
+.ara-portal {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.portal-button {
+  display: inline-block;
+  padding: 14px 32px;
+
+  border: 1px solid #111;
+  text-decoration: none;
+  color: #111;
+
+  letter-spacing: 0.12em;
+  font-size: 13px;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.portal-button:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* フッター */
+.ara-footer {
+  background: #eee;
+  padding: 40px 20px;
+  font-size: 12px;
+}
+
+.ara-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ara-footer-links a {
+  color: #111;
+  text-decoration: none;
+}
+
+.ara-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-note {
+  margin-bottom: 8px;
+}
 
