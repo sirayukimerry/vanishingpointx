@@ -118,12 +118,14 @@ body {
   font-size: 14px;
 }
 
-/* 注意文 */
+/* 注意喚起文 */
 .ara-warning {
-  margin-top: 20px;
-  font-size: 13px;
-  color: #666;
+  color: #b00020; /* 落ち着いた警告レッド */
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  margin-top: 24px;
 }
+
 
 /* =========================
    RECRUIT
