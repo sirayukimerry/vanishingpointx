@@ -18,8 +18,8 @@ body {
 .ara-header {
   background: #fff;
   padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
 }
-
 .ara-logo {
   height: 30px;
   width: auto;
