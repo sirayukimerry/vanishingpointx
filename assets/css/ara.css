@@ -47,22 +47,21 @@ body {
 
 /* 色味オーバーレイ（機関カラー） */
 .ara-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(10,40,70,0.35),
-    rgba(255,255,255,0.05)
+    rgba(255,255,255,0.55),
+    rgba(255,255,255,0.1)
   );
 }
 
+
+/* ヒーロー内テキスト */
 /* ヒーロー内テキスト */
 .ara-hero-text {
   position: relative;
   z-index: 1;
-  color: #0b1e2d;
-  text-shadow: 0 2px 12px rgba(255,255,255,0.6);
+  color: #1f2e3b;
+  text-shadow: 0 2px 10px rgba(255,255,255,0.6);
 }
 
 .ara-hero-text h1 {
@@ -77,7 +76,7 @@ body {
   width: 64px;
   height: 1px;
   margin: 20px auto 0;
-  background: rgba(10,40,70,0.6);
+  background: rgba(31,46,59,0.6);
 }
 
 /* =========================
