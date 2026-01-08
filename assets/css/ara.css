@@ -2,163 +2,181 @@
    ARA 企業サイト専用CSS
    ========================= */
 
+/* リセット＆共通 */
 body {
-  background: #f7f7f7;
+  margin: 0;
+  font-family: "Inter", "Noto Sans JP", system-ui, sans-serif;
   color: #111;
+  background: #fff;
+  line-height: 1.8;
 }
 
 /* =========================
-   ARA ヘッダー（ロゴのみ）
+   ヘッダー（ロゴのみ）
    ========================= */
 
 .ara-header {
   background: #fff;
-  border-bottom: 1px solid #e5e5e5;
-
-  padding: 8px 20px;
+  padding: 10px 20px;
 }
 
 .ara-logo {
-  height: 28px;
+  height: 22px;
   width: auto;
   display: block;
 }
 
-.ara-logo-link {
-  display: inline-block;
-}
+/* =========================
+   ヒーローエリア
+   ========================= */
 
-
-/* ヒーローエリア */
 .ara-hero {
+  position: relative;
   height: 60vh;
   min-height: 420px;
 
   background-image: url("../img/ara-hero.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
-  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
 }
 
+/* 色味オーバーレイ（機関カラー） */
 .ara-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-
-  background: rgba(255, 255, 255, 0.55);
+  background: linear-gradient(
+    90deg,
+    rgba(10,40,70,0.35),
+    rgba(255,255,255,0.05)
+  );
 }
 
-/* テキストを前に出す */
+/* ヒーロー内テキスト */
 .ara-hero-text {
   position: relative;
   z-index: 1;
+  color: #0b1e2d;
+  text-shadow: 0 2px 12px rgba(255,255,255,0.6);
 }
 
-
-.ara-hero h1 {
-  font-size: 32px;
-  letter-spacing: 0.25em;
-  line-height: 1.6;
-
-  color: #111;
+.ara-hero-text h1 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin: 0;
 }
 
+/* 下の細線アクセント */
+.hero-line {
+  width: 64px;
+  height: 1px;
+  margin: 20px auto 0;
+  background: rgba(10,40,70,0.6);
+}
 
-/* セクション共通 */
+/* =========================
+   セクション共通
+   ========================= */
+
 .ara-section {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
 }
 
 .ara-section h2 {
-  font-size: 14px;
-  letter-spacing: 0.18em;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   margin-bottom: 24px;
+  color: #0b1e2d;
 }
 
 .ara-section p {
   font-size: 15px;
-  line-height: 1.9;
+  margin-bottom: 16px;
 }
 
-/* TOPICS */
-.ara-topics {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 24px;
+/* =========================
+   TOPICS
+   ========================= */
+
+.ara-topics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .ara-topics li {
-  margin-bottom: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
 }
 
 /* 注意文 */
 .ara-warning {
+  margin-top: 20px;
   font-size: 13px;
-  color: #555;
+  color: #666;
+}
+
+/* =========================
+   RECRUIT
+   ========================= */
+
+.ara-recruit a {
+  color: #0b1e2d;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 /* ポータルボタン */
-.ara-portal {
-  text-align: center;
-  padding: 80px 20px;
-}
-
 .portal-button {
   display: inline-block;
-  padding: 14px 32px;
-
-  border: 1px solid #111;
+  margin-top: 30px;
+  padding: 12px 28px;
+  border: 1px solid #0b1e2d;
   text-decoration: none;
-  color: #111;
-
-  letter-spacing: 0.12em;
-  font-size: 13px;
-
-  transition: background 0.2s ease, color 0.2s ease;
+  color: #0b1e2d;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .portal-button:hover {
-  background: #111;
+  background: #0b1e2d;
   color: #fff;
 }
 
-/* フッター */
+/* =========================
+   フッター
+   ========================= */
+
 .ara-footer {
-  background: #eee;
+  margin-top: 120px;
   padding: 40px 20px;
-  font-size: 12px;
+  border-top: 1px solid #ddd;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
 }
 
 .ara-footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 16px;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .ara-footer-links a {
-  color: #111;
+  margin: 0 10px;
+  color: #666;
   text-decoration: none;
 }
 
 .ara-footer-links a:hover {
   text-decoration: underline;
 }
-
-.footer-note {
-  margin-bottom: 8px;
-}
-
