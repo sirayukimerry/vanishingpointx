@@ -137,22 +137,26 @@ body {
   font-weight: 500;
 }
 
-/* ポータルボタン */
+/* ポータルボタン用ラッパー */
+.ara-portal {
+  text-align: center;
+  margin: 80px 0;
+}
+
+/* ボタン本体 */
 .portal-button {
   display: inline-block;
-  text-align: center;
-  margin-top: 40px;
-  padding: 12px 28px;
-  border: 1px solid #0b1e2d;
+  padding: 14px 32px;
+  border: 1px solid #333;
+  color: #333;
   text-decoration: none;
-  color: #0b1e2d;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.08em;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .portal-button:hover {
-  background: #0b1e2d;
+  background: #333;
   color: #fff;
 }
 
