@@ -207,5 +207,56 @@ body {
   letter-spacing: 0.08em;
 }
 
+/* =========================
+   組織概要ページ
+   ========================= */
+
+.ara-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* ページタイトル */
+.ara-page-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  color: #1f2e3b;
+}
+
+/* プロフィール全体 */
+.company-profile {
+  border-top: 1px solid #ddd;
+}
+
+/* 1行ごと */
+.profile-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+/* タイトル側（グレー帯＋バー） */
+.profile-title {
+  width: 220px;
+  padding: 16px 20px;
+  background: #f2f2f2;
+  border-left: 4px solid #b5b5b5;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #555;
+  box-sizing: border-box;
+}
+
+/* データ側 */
+.profile-data {
+  flex: 1;
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #222;
+  box-sizing: border-box;
+}
 
 
