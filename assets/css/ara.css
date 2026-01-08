@@ -180,3 +180,27 @@ body {
 .ara-footer-links a:hover {
   text-decoration: underline;
 }
+
+/* =========================
+   フィクション表記（中央）
+   ========================= */
+
+.ara-disclaimer {
+  margin: 120px auto 80px;
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+}
+
+.ara-disclaimer p {
+  margin: 0;
+}
+
+.ara-disclaimer .copyright {
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
