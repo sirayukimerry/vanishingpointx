@@ -161,33 +161,32 @@ body {
 .ara-footer {
   margin-top: 120px;
   padding: 40px 20px 60px;
-  border-top: 1px solid #ddd;
+  background: #f2f2f2; /* ← ポータルと同系のグレー */
+  border-top: 1px solid #e0e0e0;
   font-size: 13px;
   color: #666;
 }
 
+/* フッターリンク（横並び・中央） */
 .ara-footer-links {
-  max-width: 900px;
-  margin: 0 auto 40px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
 .ara-footer-links a {
-  display: block;
-  margin-bottom: 8px;
-  color: #666;
+  color: #555;
   text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.06em;
 }
 
 .ara-footer-links a:hover {
   text-decoration: underline;
 }
 
-
-/* =========================
-   フィクション表記（中央）
-   ========================= */
-
+/* 免責文 */
 .ara-disclaimer {
   text-align: center;
   color: #777;
@@ -201,5 +200,6 @@ body {
   font-size: 12px;
   letter-spacing: 0.08em;
 }
+
 
 
