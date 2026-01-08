@@ -7,6 +7,28 @@ body {
   color: #111;
 }
 
+/* =========================
+   ARA ヘッダー（ロゴのみ）
+   ========================= */
+
+.ara-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+
+  padding: 12px 20px;
+}
+
+.ara-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.ara-logo-link {
+  display: inline-block;
+}
+
+
 /* ヒーローエリア */
 .ara-hero {
   height: 60vh;
