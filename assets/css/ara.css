@@ -608,3 +608,19 @@ body {
   margin: 0;
 }
 
+/* =========================
+   採用ページ メイン画像
+   ========================= */
+
+.recruit-hero-image {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.recruit-hero-image img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
