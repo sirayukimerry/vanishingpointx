@@ -259,4 +259,64 @@ body {
   box-sizing: border-box;
 }
 
+/* =========================
+   私たちの取り組み
+   ========================= */
+
+/* 序文 */
+.ara-intro {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+/* メイン画像 */
+.ara-main-image {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.ara-main-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* セクション全体 */
+.work-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+/* 左側（アイコン＋見出し） */
+.work-left {
+  width: 220px;
+  text-align: center;
+}
+
+.work-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.work-title {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  color: #1f2e3b;
+}
+
+/* 右側（本文） */
+.work-right {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* 事例 */
+.work-example {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #555;
+}
 
