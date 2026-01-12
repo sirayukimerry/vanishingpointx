@@ -405,42 +405,70 @@ body {
 /* =========================
    お知らせ（カード・折りたたみ）
    ========================= */
+/* =========================
+   topics 折りたたみヘッダー拡張
+   ========================= */
 
 .topic-card {
   border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   background: #fff;
 }
 
-/* 見出し部分 */
-.topic-summary {
-  padding: 16px 20px;
+/* クリックできるバー全体 */
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  min-height: 64px;              /* ← 高さを出す */
+  padding: 16px 24px;            /* ← 横に長く見せる */
+
+  background: #f7f7f7;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+
+  transition: background 0.2s ease;
+}
+
+/* ホバー時 */
+.topic-header:hover {
+  background: #efefef;
+}
+
+/* 日付 */
+.topic-date {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #666;
+  min-width: 96px;               /* ← 日付分の幅を固定 */
+  flex-shrink: 0;
+}
+
+/* 見出し */
+.topic-header h2 {
   font-size: 16px;
   font-weight: 500;
-  color: #1f2e3b;
-  cursor: pointer;
-  list-style: none;
+  margin: 0;
+  color: #111;
+  line-height: 1.5;
 }
 
-.topic-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* 本文 */
+/* 本文（折りたたみ） */
 .topic-body {
-  padding: 0 20px 20px;
-  font-size: 14px;
-  line-height: 1.9;
+  display: none;
+  padding: 20px 24px;
+  border-top: 1px solid #ddd;
+  line-height: 1.8;
 }
 
-/* 開いたとき少し強調 */
-.topic-card[open] .topic-summary {
-  background: #f5f5f5;
+/* 開いている状態 */
+.topic-card.open .topic-body {
+  display: block;
 }
 
- </div>
-</article>
 
 /* =========================
    採用情報
