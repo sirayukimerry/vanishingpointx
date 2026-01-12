@@ -439,3 +439,49 @@ body {
   background: #f5f5f5;
 }
 
+/* =========================
+   採用情報
+   ========================= */
+
+.recruit-message {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.recruit-description p {
+  margin-bottom: 16px;
+  line-height: 1.9;
+}
+
+.recruit-position-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+
+.recruit-position-list li {
+  margin-bottom: 8px;
+}
+
+.recruit-entry {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.recruit-entry-text {
+  margin-bottom: 16px;
+}
+
+.entry-button {
+  padding: 12px 40px;
+  font-size: 14px;
+  background: #ccc;
+  border: none;
+  cursor: not-allowed;
+}
+
+.recruit-note {
+  font-size: 13px;
+  color: #555;
+}
+
