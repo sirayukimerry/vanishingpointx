@@ -93,6 +93,83 @@
   border-color: #666;
 }
 
+/* =========================
+ 通達カード（メイン）
+   ========================= */
+
+.portal-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.notice-card {
+  background: #fff;
+  border-left: 6px solid #111;
+  padding: 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.portal-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.notice-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.notice-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.notice-list {
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+.guide-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  padding: 28px;
+}
+
+.guide-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   「報告書を提出する」を主要アクションボタン化
+   ========================= */
+.primary-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 32px;
+
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
 
 /* =========================
    職員一覧（staff.html）
