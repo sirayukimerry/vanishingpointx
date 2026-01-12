@@ -105,4 +105,15 @@
 </footer>
 
 </body>
+  
+<script>
+  document.querySelectorAll(".topic-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const card = header.closest(".topic-card");
+      card.classList.toggle("open");
+    });
+  });
+</script>
+
+  
 </html>
