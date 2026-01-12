@@ -107,7 +107,7 @@ body {
    ========================= */
 
 .ara-inner {
-  max-width: 1000px;   /* ← about / recruit と同じ数値に */
+  max-width: 900px;   /* ← about / recruit と同じ数値に */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -115,6 +115,10 @@ body {
 /* =========================
    TOPICS
    ========================= */
+
+.ara-topics {
+  padding-top: 40px;
+}
 
 .ara-topics ul {
   list-style: none;
