@@ -2,61 +2,107 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>超常現象捜査機関　職員用ポータルサイト</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-　<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-　<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <title>ARA 職員用ポータルサイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+  <!-- =========================
+       ナビバー（既存のもの）
+       ========================= -->
+  <header class="navbar">
+    <a href="index.html">
+      <img src="images/logo.png" alt="ARAロゴ" class="nav-logo">
+    </a>
 
-   <!-- ナビゲーションバー -->
-<header class="navbar">
-  <!-- 左：ロゴ -->
- <div class="nav-left">
-  <a href="ara.html">
-    <img src="assets/img/logo.png"
-         alt="ARA 超常現象捜査機関 ロゴ"
-         class="nav-logo">
-  </a>
-</div>
+    <nav class="nav-center">
+      <a href="index.html">ホーム</a>
+      <a href="staff.html">職員照会</a>
+      <a href="archive.html">アーカイブ</a>
+      <a href="mypage.html">マイページ</a>
+    </nav>
 
+    <input type="search" class="nav-search" placeholder="キーワードを検索">
+  </header>
 
-  <!-- 中央：メニュー -->
-  <nav class="nav-center">
-    <a href="index.html">ホーム</a>
-    <a href="staff.html">職員照会</a>
-    <a href="archive.html">アーカイブ</a>
-    <a href="individual.html">マイページ</a>
-  </nav>
+  <!-- =========================
+       メインコンテンツ
+       ========================= -->
+  <main class="page portal-top">
 
-  <!-- 右：検索バー -->
-  <div class="nav-right">
-    <input
-      type="search"
-      class="nav-search"
-      placeholder="キーワードを検索"
-    >
-  </div>
-</header>
+    <!-- ページタイトル -->
+    <h1 class="portal-title">
+      超常現象捜査機関<br>
+      職員用ポータルサイト
+    </h1>
 
+    <!-- 通達エリア -->
+    <section class="portal-section notice">
+      <h2 class="portal-heading">
+        内部調査チームへ調査任務のお知らせ
+      </h2>
 
-  <!-- メインコンテンツ -->
-  <main class="page">
-    <h1>超常現象捜査機関　職員用ポータルサイト</h1>
-    <p>内部調査チームへ調査任務のお知らせ</p>
+      <div class="portal-box">
+        <h3 class="portal-subheading">
+          以下の2点をまとめた報告書を提出
+        </h3>
+
+        <ul class="portal-list">
+          <li>アノマリーの消息</li>
+          <li>各犠牲者に対する殺人犯の名前</li>
+        </ul>
+
+        <a href="answer.html" class="portal-button">
+          報告書を提出する
+        </a>
+      </div>
+    </section>
+
+    <!-- 調査の進め方 -->
+    <section class="portal-section guide">
+      <h3 class="portal-subheading">
+        調査の進め方
+      </h3>
+
+      <ul class="portal-list">
+        <li>各自マイページを確認</li>
+      </ul>
+
+      <p class="portal-text">
+        以後、適宜以下の内容を進めること。
+      </p>
+
+      <ul class="portal-list">
+        <li>職員照会・アーカイブページで資料の確認</li>
+        <li>調査員同士の相談</li>
+        <li>
+          ポータルサイト内検索で気になる単語の検索<br>
+          <span class="portal-note">
+            → 単語検索は「りんご」のように1ワードでしか反応しません。
+          </span>
+        </li>
+      </ul>
+
+      <p class="portal-text">
+        調査終了後は報告書提出フォームより報告書を提出
+      </p>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-  <p class="footer-note">
-    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
-  </p>
-  <p class="footer-copy">
-    ©2026　白雪メリー
-  </p>
-</footer>
+  <!-- =========================
+       フッター（既存共通）
+       ========================= -->
+  <footer class="footer">
+    <p class="footer-text">
+      このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+    </p>
+    <p class="footer-copy">
+      ©2026 白雪メリー
+    </p>
+  </footer>
 
 </body>
 </html>
