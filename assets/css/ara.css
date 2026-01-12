@@ -535,3 +535,33 @@ body {
   cursor: pointer;
 }
 
+/* =========================
+   採用ページ専用トーン
+   ========================= */
+
+.recruit-page {
+  background: #f5f7f9;
+}
+
+.recruit-page .ara-page-title {
+  color: #1f2e3a;
+}
+
+.recruit-message {
+  font-weight: 500;
+  color: #243746;
+}
+
+.recruit-position-list li {
+  color: #2a3c4a;
+}
+
+.entry-button {
+  background: #2f4a63;
+  color: #fff;
+}
+
+.entry-button:hover {
+  background: #243a4f;
+}
+
