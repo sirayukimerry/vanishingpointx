@@ -64,9 +64,9 @@
     </p>
 
     <!-- 実際には遷移しないボタン -->
-    <button class="entry-button" type="button" disabled>
-      ENTRY
-    </button>
+    <button class="entry-button" id="openModal" type="button">
+  ENTRY
+</button>
   </div>
 
   <!-- 注意文 -->
@@ -76,7 +76,24 @@
   </p>
 
 </main>
+<!-- =========================
+     ENTRY モーダル
+     ========================= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <h3>採用エントリーについて</h3>
+    <p>
+      現在、本サイトからのエントリー受付は行っておりません。<br>
+      募集情報は今後順次公開予定です。
+    </p>
+    <p class="modal-note">
+      ※本ページは世界観演出用のフィクションサイトです。
+    </p>
+    <button class="modal-close" id="closeModal">閉じる</button>
+  </div>
+</div>
 
+  
 <!-- =========================
      フッター
      ========================= -->
@@ -99,5 +116,26 @@
 </footer>
 
 </body>
+<script>
+  const openBtn = document.getElementById("openModal");
+  const closeBtn = document.getElementById("closeModal");
+  const modal = document.getElementById("modalOverlay");
+
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+</script>
+
+  
 </html>
 
