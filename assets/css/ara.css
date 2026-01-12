@@ -268,7 +268,7 @@ body {
   text-align: left;          /* ← 左揃え */
   max-width: 900px;
   margin: 0 auto 40px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 
@@ -290,31 +290,36 @@ body {
   margin-bottom: 80px;
 }
 
-/* 左側（アイコン＋見出し） */
+/* 左カラム（見出し＋アイコン） */
 .work-left {
   width: 220px;
   text-align: center;
   padding-right: 20px;
-  border-right: 1px solid #e0e0e0; /* ← うっすら縦線 */
+  border-right: 1px solid rgba(0,0,0,0.08);
 }
 
-.work-icon {
-  width: 60px;
-  height: auto;
+/* 小見出し */
+.work-title {
+  font-size: 24px;
+  letter-spacing: 0.12em;
+  color: #1f2e3b;
   margin-bottom: 16px;
 }
 
-.work-title {
-  font-size: 18px;
-  letter-spacing: 0.12em;
-  color: #1f2e3b;
+/* アイコン */
+.work-icon {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* 右側（本文） */
+/* 右カラム（本文） */
 .work-right {
   flex: 1;
   font-size: 14px;
   line-height: 1.9;
+  padding-top: 44px; /* ← アイコンの上端に合わせる */
 }
 
 /* 事例 */
