@@ -126,6 +126,19 @@ body {
   margin-top: 24px;
 }
 
+/* =========================
+   ara.html TOPICS（リンク専用）
+   ========================= */
+
+.topic-header.link-only {
+  text-decoration: none;
+  color: inherit;
+}
+
+.topic-header.link-only:hover h3 {
+  text-decoration: underline;
+}
+
 
 /* =========================
    RECRUIT
