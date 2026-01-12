@@ -402,3 +402,40 @@ body {
   line-height: 1.8;
 }
 
+/* =========================
+   お知らせ（カード・折りたたみ）
+   ========================= */
+
+.topic-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  background: #fff;
+}
+
+/* 見出し部分 */
+.topic-summary {
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2e3b;
+  cursor: pointer;
+  list-style: none;
+}
+
+.topic-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 本文 */
+.topic-body {
+  padding: 0 20px 20px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* 開いたとき少し強調 */
+.topic-card[open] .topic-summary {
+  background: #f5f5f5;
+}
+
