@@ -532,6 +532,25 @@
 }
 
 /* =========================
+   アーカイブ
+   ========================= */
+
+.page-note {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.archive-list {
+  max-width: 800px;
+}
+
+.archive-list .member-list a {
+  display: inline-block;
+  padding: 4px 0;
+}
+
+/* =========================
    本文
    ========================= */
 
