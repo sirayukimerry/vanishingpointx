@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アーカイブ資料｜ARA 職員用ポータル</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- ナビバー -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="../index.html">
+      <img src="../assets/img/logo.png" alt="ARA ロゴ" class="nav-logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
+  </nav>
+
+  <input type="text" class="nav-search" placeholder="検索">
+</header>
+
+<main class="page">
+
+  <!-- メタ情報 -->
+  <section class="archive-meta">
+    <span class="archive-label">ARCHIVE</span>
+    <span class="archive-id">FILE-ID : ARC-01-FACILITY</span>
+  </section>
+
+  <!-- タイトル -->
+  <h1 class="archive-title">
+    協力職員向け作業マニュアル
+  </h1>
+
+  <!-- 注意文 -->
+  <p class="archive-warning">
+    ※本資料は職員向け内部資料です。内容の外部共有を禁止します。
+  </p>
+
+  <!-- 区切り線 -->
+  <hr class="archive-divider">
+
+  <!-- 本文エリア -->
+  <section class="archive-content">
+
+    <!-- ▼ ここに画像 or PDFを貼る -->
+    <!-- 画像の場合 -->
+    <img src="../assets/img/archive/zmanual.png"
+         alt="協力職員向け作業マニュアル"
+         class="archive-image">
+
+ 
+    <!-- 補足説明 -->
+    <p class="archive-note">
+      本図面は2245年度時点の情報を元に作成されています。
+      一部改修箇所については反映されていない可能性があります。
+    </p>
+
+  </section>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026 白雪メリー
+  </p>
+</footer>
+
+</body>
+</html>
