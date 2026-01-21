@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>内部調査報告書｜ARA 職員用ポータル</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ナビバー（ルート階層想定） -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="ara.html">
+      <img src="assets/img/logo.png" alt="ARAロゴ" class="nav-logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="index.html">ホーム</a>
+    <a href="staff.html">職員照会</a>
+    <a href="archive.html">アーカイブ</a>
+    <a href="individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input type="search" class="nav-search" placeholder="検索">
+  </div>
+</header>
+
+<main class="page document-page">
+
+  <!-- タイトル -->
+  <h1 class="document-title">内部調査報告書</h1>
+
+  <!-- 注意文 -->
+  <p class="archive-warning">
+    ※本報告書は内部調査目的でのみ使用されます。虚偽の申告は禁止されています。
+  </p>
+
+  <!-- =========================
+       報告者選択
+       ========================= -->
+  <section class="document-section">
+    <h2>報告者</h2>
+
+    <select class="reporter-select">
+      <option value="">選択してください</option>
+      <option value="metis">メティス</option>
+      <option value="aitone">アイトネ</option>
+      <option value="leda">レダ</option>
+    </select>
+  </section>
+
+  <!-- =========================
+       殺害対応表
+       ========================= -->
+  <section class="document-section">
+    <h2>死亡事案の整理</h2>
+
+    <p>
+      今回の死亡事案について、被害者名と殺害者名を対応させて記述せよ。
+    </p>
+
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th>被害者名</th>
+          <th>殺害者名</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><input type="text"></td><td><input type="text"></td></tr>
+        <tr><td><input type="text"></td><td><input type="text"></td></tr>
+        <tr><td><input type="text"></td><td><input type="text"></td></tr>
+        <tr><td><input type="text"></td><td><input type="text"></td></tr>
+        <tr><td><input type="text"></td><td><input type="text"></td></tr>
+        <tr><td><input type="text"></td><td><input type="text"></td></tr>
+        <tr><td><input type="text"></td><td><input type="text"></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- =========================
+       アノマリー所在
+       ========================= -->
+  <section class="document-section">
+    <h2>アノマリーの所在について</h2>
+
+    <p>
+      本件終了時点において、アノマリーはどこに潜伏していると考えられるか。
+      住所、または潜伏している人物名を記述せよ。
+    </p>
+
+    <textarea rows="3" placeholder="例：エリア○○・○○地区／タロウ・タナカ"></textarea>
+  </section>
+
+  <!-- =========================
+       再発防止策
+       ========================= -->
+  <section class="document-section document-secret">
+    <h2>再発防止策の選択</h2>
+
+    <p>
+      同様の事案を防ぐため、ARAが最優先で取るべき対応を選択せよ。
+    </p>
+
+    <label class="radio-option">
+      <input type="radio" name="prevention">
+      アノマリーの完全破壊
+    </label>
+
+    <label class="radio-option">
+      <input type="radio" name="prevention">
+      管理・運用体制の見直し
+    </label>
+
+    <label class="radio-option">
+      <input type="radio" name="prevention">
+      判断不能（保留）
+    </label>
+  </section>
+
+  <!-- =========================
+       提出
+       ========================= -->
+  <section class="document-section">
+    <a href="#" class="primary-button">報告書を提出する</a>
+  </section>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">©2026 白雪メリー</p>
+</footer>
+
+</body>
+</html>
