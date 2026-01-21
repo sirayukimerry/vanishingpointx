@@ -130,7 +130,9 @@
 
   
   <section class="document-section">
-    <button class="primary-button" id="openModal">報告書を提出する</button>
+    <button type="button" class="primary-button" onclick="submitReport()">
+  提出する
+</button>
   </section>
 
 
@@ -236,6 +238,35 @@ function submitReport() {
     </p>
   </div>
 </div>
+  
+<script>
+  function submitReport() {
+    // スクロール拘束
+    document.body.classList.add("lock-scroll");
+
+    // オーバーレイ表示
+    const overlay = document.getElementById("submit-overlay");
+    overlay.classList.add("active");
+
+    // 行要素
+    const line2 = document.getElementById("submit-line-2");
+    const line3 = document.getElementById("submit-line-3");
+
+    // 時間差表示
+    setTimeout(() => {
+      line2.classList.remove("hidden");
+    }, 500);
+
+    setTimeout(() => {
+      line3.classList.remove("hidden");
+    }, 1000);
+
+    // epilog.html へ遷移
+    setTimeout(() => {
+      window.location.href = "epilog.html";
+    }, 1600);
+  }
+</script>
 
   
 </body>
