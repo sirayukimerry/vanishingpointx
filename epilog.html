@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>最終対応方針の決定｜ARA 職員用ポータル</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .result-box {
+      text-align: center;
+      margin: 48px 0;
+    }
+
+    .result-score {
+      font-size: 32px;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+
+    .result-rank {
+      font-size: 18px;
+      letter-spacing: 0.16em;
+      color: #444;
+    }
+
+    .decision-note {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.9;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .ending-links {
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .ending-link {
+      display: block;
+      padding: 14px 20px;
+      border: 1px solid #333;
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-align: center;
+      transition: background 0.2s ease;
+    }
+
+    .ending-link:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .ending-warning {
+      font-size: 12px;
+      color: #777;
+      margin-top: 32px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <a href="ara.html">
+      <img src="assets/img/logo.png" alt="ARAロゴ" class="nav-logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="index.html">ホーム</a>
+    <a href="staff.html">職員照会</a>
+    <a href="archive.html">アーカイブ</a>
+    <a href="individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input type="search" class="nav-search" placeholder="検索">
+  </div>
+</header>
+
+<main class="page document-page">
+
+  <h1 class="document-title">最終対応方針の決定について</h1>
+
+  <p class="archive-warning">
+    ※以下の内容は、本事案に関する内部判断結果を示すものです。
+  </p>
+
+  <!-- 評価結果 -->
+  <div class="result-box">
+    <div class="result-score" id="scoreText">-- / 100</div>
+    <div class="result-rank" id="rankText">評価ランク：-</div>
+  </div>
+
+  <p class="decision-note">
+    本評価は、<br>
+    提出された報告内容をもとに算出された<br>
+    <strong>暫定的な内部評価</strong>です。<br><br>
+
+    評価結果は、<br>
+    対応方針の正当性、<br>
+    または判断の完全性を保証するものではありません。
+  </p>
+
+  <p class="decision-note">
+    本事案に対する最終的な対応は、<br>
+    <strong>関係者による合意形成</strong>をもって決定されます。<br><br>
+
+    以下の対応方針について、<br>
+    プレイヤー間で協議のうえ、<br>
+    <strong>最も多く選択されたものを実行してください。</strong>
+  </p>
+
+  <!-- エンディング選択 -->
+  <div class="ending-links">
+    <a href="ending01.html" class="ending-link">
+      アノマリーの完全破壊
+    </a>
+
+    <a href="ending02.html" class="ending-link">
+      管理・運用体制の見直し
+    </a>
+
+    <a href="ending03.html" class="ending-link">
+      判断不能（保留）
+    </a>
+  </div>
+
+  <p class="ending-warning">
+    ※選択された対応方針は、以後の展開に影響を与える可能性があります。
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">©2026 白雪メリー</p>
+</footer>
+
+<script>
+  const score = sessionStorage.getItem("score");
+  const rank = sessionStorage.getItem("rank");
+
+  if (score !== null) {
+    document.getElementById("scoreText").textContent = `${score} / 100`;
+  }
+
+  if (rank !== null) {
+    document.getElementById("rankText").textContent = `評価ランク：${rank}`;
+  }
+</script>
+
+</body>
+</html>
