@@ -11,9 +11,9 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; ← 削除 */
 
-  padding: 0 16px;
+  padding: 0 24px;
   box-sizing: border-box;
 
   background: rgba(245,245,245,0.95);
@@ -22,13 +22,29 @@
   z-index: 1000;
 }
 
+
 /* 左・中央・右 共通 */
-.nav-left,
-.nav-center,
+.nav-left {
+  display: flex;
+  align-items: center;
+  min-width: 160px; /* ロゴ用の重り */
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
+  min-width: 180px; /* 検索窓用の重り */
+  justify-content: flex-end;
 }
+
 
 /* =========================
    ロゴ
@@ -72,6 +88,7 @@
 
 .nav-search {
   width: 160px;
+  height: 32px;
   padding: 6px 10px;
 
   font-family: "Inter", "Noto Sans JP", system-ui, sans-serif;
