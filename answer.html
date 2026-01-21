@@ -101,9 +101,38 @@
     <textarea id="anomalyAnswer" rows="3"></textarea>
   </section>
 
+<!-- =========================
+     再発防止策（最終判断）
+     ========================= -->
+<section class="document-section document-secret">
+  <h2>再発防止策の選択</h2>
+
+  <p>
+    同様の事案を防ぐため、<br>
+    ARAが最優先で取るべき対応を選択せよ。
+  </p>
+
+  <label class="radio-option">
+    <input type="radio" name="finalDecision">
+    アノマリーの完全破壊
+  </label><br>
+
+  <label class="radio-option">
+    <input type="radio" name="finalDecision">
+    管理・運用体制の見直し
+  </label><br>
+
+  <label class="radio-option">
+    <input type="radio" name="finalDecision">
+    判断不能（保留）
+  </label>
+</section>
+
+  
   <section class="document-section">
     <button class="primary-button" id="openModal">報告書を提出する</button>
   </section>
+
 
 </main>
 
