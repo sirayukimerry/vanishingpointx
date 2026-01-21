@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
-    /* モーダル */
+    /* =========================
+       モーダル（最終通告）
+       ========================= */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -18,6 +20,7 @@
       justify-content: center;
       z-index: 2000;
     }
+
     .modal {
       background: #fff;
       max-width: 520px;
@@ -25,39 +28,99 @@
       border: 1px solid #ccc;
       box-shadow: 0 12px 32px rgba(0,0,0,0.25);
     }
+
     .modal h2 {
       font-size: 14px;
       letter-spacing: 0.12em;
       margin-bottom: 20px;
     }
+
     .modal p {
       font-size: 14px;
       line-height: 1.9;
       margin-bottom: 16px;
     }
+
     .modal strong {
       color: #b00020;
     }
+
     .modal-actions {
       display: flex;
       justify-content: flex-end;
       gap: 16px;
       margin-top: 24px;
     }
+
     .modal-actions button {
       padding: 10px 20px;
       font-size: 13px;
       border: 1px solid #333;
       cursor: pointer;
+      background: #fff;
     }
+
     .modal-submit {
       background: #111;
       color: #fff;
     }
+
+    /* =========================
+       アノマリー入力欄調整
+       ========================= */
+    #anomalyAnswer {
+      width: 100%;
+      max-width: 600px;
+      min-height: 48px;
+      padding: 8px 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    /* =========================
+       提出後演出オーバーレイ
+       ========================= */
+    .submit-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      z-index: 3000;
+    }
+
+    .submit-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .submit-text {
+      color: #eaeaea;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-align: center;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .lock-scroll {
+      overflow: hidden;
+    }
   </style>
 </head>
+
 <body>
 
+<!-- =========================
+     ナビバー
+     ========================= -->
 <header class="navbar">
   <div class="nav-left">
     <a href="ara.html">
@@ -79,7 +142,9 @@
 
   <h1 class="document-title">内部調査報告書</h1>
 
-  <!-- 殺害対応 -->
+  <!-- =========================
+       死亡事案の整理
+       ========================= -->
   <section class="document-section">
     <h2>死亡事案の整理</h2>
     <p>被害者名と殺害者名を対応させて記述せよ。（氏名はフルネーム指定）</p>
@@ -95,50 +160,55 @@
     </table>
   </section>
 
-  <!-- アノマリー -->
+  <!-- =========================
+       アノマリーの所在
+       ========================= -->
   <section class="document-section">
     <h2>アノマリーの所在（氏名はフルネーム指定）</h2>
-    <textarea id="anomalyAnswer" rows="3"></textarea>
+    <textarea id="anomalyAnswer"></textarea>
   </section>
 
-<!-- =========================
-     再発防止策（最終判断）
-     ========================= -->
-<section class="document-section document-secret">
-  <h2>再発防止策の選択</h2>
+  <!-- =========================
+       再発防止策
+       ========================= -->
+  <section class="document-section document-secret">
+    <h2>再発防止策の選択</h2>
 
-  <p>
-    同様の事案を防ぐため、<br>
-    ARAが最優先で取るべき対応を選択せよ。
-  </p>
+    <p>
+      同様の事案を防ぐため、<br>
+      ARAが最優先で取るべき対応を選択せよ。
+    </p>
 
-  <label class="radio-option">
-    <input type="radio" name="finalDecision">
-    アノマリーの完全破壊
-  </label><br>
+    <label>
+      <input type="radio" name="finalDecision">
+      アノマリーの完全破壊
+    </label><br>
 
-  <label class="radio-option">
-    <input type="radio" name="finalDecision">
-    管理・運用体制の見直し
-  </label><br>
+    <label>
+      <input type="radio" name="finalDecision">
+      管理・運用体制の見直し
+    </label><br>
 
-  <label class="radio-option">
-    <input type="radio" name="finalDecision">
-    判断不能（保留）
-  </label>
-</section>
+    <label>
+      <input type="radio" name="finalDecision">
+      判断不能（保留）
+    </label>
+  </section>
 
-  
+  <!-- =========================
+       提出ボタン
+       ========================= -->
   <section class="document-section">
-    <button type="button" class="primary-button" onclick="submitReport()">
-  提出する
-</button>
+    <button type="button" class="primary-button" onclick="openConfirmModal()">
+      提出する
+    </button>
   </section>
-
 
 </main>
 
-<!-- モーダル -->
+<!-- =========================
+     最終確認モーダル
+     ========================= -->
 <div class="modal-overlay" id="confirmModal">
   <div class="modal">
     <h2>最終確認</h2>
@@ -158,8 +228,24 @@
 
     <div class="modal-actions">
       <button onclick="closeModal()">戻って修正する</button>
-      <button class="modal-submit" onclick="submitReport()">提出する</button>
+      <button class="modal-submit" onclick="finalSubmit()">提出する</button>
     </div>
+  </div>
+</div>
+
+<!-- =========================
+     提出後演出オーバーレイ
+     ========================= -->
+<div id="submit-overlay" class="submit-overlay" aria-hidden="true">
+  <div class="submit-text">
+    <p id="submit-line-1">報告書を提出しています…</p>
+    <p id="submit-line-2" class="hidden">
+      本判断は、<br>
+      ARAの公式記録として保存されます。
+    </p>
+    <p id="submit-line-3" class="hidden">
+      評価を算出しています…
+    </p>
   </div>
 </div>
 
@@ -167,7 +253,6 @@
 /* =========================
    正解データ
    ========================= */
-
 const correctPairs = [
   ["クレア・タウナー", "アンバー・イェイツ"],
   ["ブラッドリー・ホースウッド", "アンバー・イェイツ"],
@@ -183,25 +268,38 @@ const anomalyCorrect = ["アイトネ・バラティエ"];
 /* =========================
    モーダル制御
    ========================= */
-
 const modal = document.getElementById("confirmModal");
-document.getElementById("openModal").onclick = () => modal.style.display = "flex";
-function closeModal() { modal.style.display = "none"; }
+
+function openConfirmModal() {
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
 
 /* =========================
-   採点処理
+   最終提出処理
    ========================= */
+function finalSubmit() {
+  modal.style.display = "none";
 
-function submitReport() {
   let score = 0;
+  let remainingPairs = [...correctPairs];
 
-  // 殺害対応（10点×7）
+  // 殺害対応（順不同・重複不可）
   const rows = document.querySelectorAll("#killTable tr");
   rows.forEach(row => {
     const v = row.children[0].querySelector("input").value.trim();
     const k = row.children[1].querySelector("input").value.trim();
-    if (correctPairs.some(p => p[0] === v && p[1] === k)) {
+
+    const index = remainingPairs.findIndex(
+      p => p[0] === v && p[1] === k
+    );
+
+    if (index !== -1) {
       score += 10;
+      remainingPairs.splice(index, 1);
     }
   });
 
@@ -217,57 +315,28 @@ function submitReport() {
   else if (score >= 80) rank = "A";
   else if (score >= 50) rank = "B";
 
-  // 結果保存（epilog用）
+  // 結果保存
   sessionStorage.setItem("score", score);
   sessionStorage.setItem("rank", rank);
 
-  window.location.href = "epilog.html";
+  // 演出開始
+  document.body.classList.add("lock-scroll");
+  const overlay = document.getElementById("submit-overlay");
+  overlay.classList.add("active");
+
+  setTimeout(() => {
+    document.getElementById("submit-line-2").classList.remove("hidden");
+  }, 500);
+
+  setTimeout(() => {
+    document.getElementById("submit-line-3").classList.remove("hidden");
+  }, 1000);
+
+  setTimeout(() => {
+    window.location.href = "epilog.html";
+  }, 1600);
 }
 </script>
 
-<!-- 提出後演出オーバーレイ -->
-<div id="submit-overlay" class="submit-overlay" aria-hidden="true">
-  <div class="submit-text">
-    <p id="submit-line-1">報告書を提出しています…</p>
-    <p id="submit-line-2" class="hidden">
-      本判断は、<br>
-      ARAの公式記録として保存されます。
-    </p>
-    <p id="submit-line-3" class="hidden">
-      評価を算出しています…
-    </p>
-  </div>
-</div>
-  
-<script>
-  function submitReport() {
-    // スクロール拘束
-    document.body.classList.add("lock-scroll");
-
-    // オーバーレイ表示
-    const overlay = document.getElementById("submit-overlay");
-    overlay.classList.add("active");
-
-    // 行要素
-    const line2 = document.getElementById("submit-line-2");
-    const line3 = document.getElementById("submit-line-3");
-
-    // 時間差表示
-    setTimeout(() => {
-      line2.classList.remove("hidden");
-    }, 500);
-
-    setTimeout(() => {
-      line3.classList.remove("hidden");
-    }, 1000);
-
-    // epilog.html へ遷移
-    setTimeout(() => {
-      window.location.href = "epilog.html";
-    }, 1600);
-  }
-</script>
-
-  
 </body>
 </html>
