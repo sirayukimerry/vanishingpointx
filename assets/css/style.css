@@ -624,6 +624,17 @@
   color: #555;
 }
 
+#anomalyAnswer {
+  width: 100%;
+  max-width: 600px;
+  min-height: 48px;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+
 /* =========================
    提出後 演出オーバーレイ
    ========================= */
