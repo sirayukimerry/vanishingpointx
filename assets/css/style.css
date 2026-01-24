@@ -654,13 +654,15 @@
 
 #anomalyAnswer {
   width: 100%;
-  max-width: 600px;
-  min-height: 48px;
-  padding: 8px 10px;
+  max-width: 800px;
+  min-height: 60px;
+  padding: 8px;
   font-size: 14px;
   line-height: 1.6;
-  resize: vertical;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
 }
+
 
 
 /* =========================
