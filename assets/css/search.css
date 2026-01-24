@@ -197,3 +197,21 @@ body.search-mode .primary-button:hover {
   line-height: 2;
   white-space: pre-line;
 }
+
+/* =========================
+   資料カウンター
+   ========================= */
+
+.doc-counter {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: #ffeb3b;          /* 黄色系 */
+  opacity: 0.85;
+
+  margin-bottom: 24px;
+   
+   /* 右上に配置 */
+  position: absolute;
+  top: 88px;              /* ナビバー下 */
+  right: 24px;
+}
