@@ -131,3 +131,19 @@ body.search-mode {
 .search-mode .footer-copy {
   color: #f5e663;
 }
+
+/* =========================
+   検索モード用リンク色
+   ========================= */
+
+body.search-mode a {
+  color: #0fc;
+  text-decoration: underline;
+}
+
+body.search-mode a:hover {
+  color: #7ff;
+  text-decoration: none;
+}
+
+
