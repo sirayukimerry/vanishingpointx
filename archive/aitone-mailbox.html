@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アイトネ・バラティエ メールボックス認証｜ARA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 検索限定CSS -->
+  <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+
+<body class="search-mode">
+
+<!-- =========================
+     ナビバー（共通）
+     ========================= -->
+<header class="navbar search-navbar">
+  <div class="nav-left">
+    <a href="../ara.html">
+      <img src="../assets/img/logo_search.png" class="nav-logo" alt="ARAロゴ">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input
+      type="search"
+      class="nav-search"
+      placeholder="検索"
+      onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+    >
+  </div>
+</header>
+
+<!-- =========================
+     本文（中央寄せ）
+     ========================= -->
+<main class="search-container">
+  <section class="search-box">
+
+    <h1 class="search-title">アイトネ・バラティエ メールボックス認証</h1>
+
+    <p class="search-note">
+      本領域は、ARA職員アイトネ・バラティエの<br>
+      個人通信記録を含みます。
+    </p>
+
+    <p class="search-warning">
+      アクセスには認証が必要です。
+    </p>
+
+    <div class="password-box">
+      <label for="password">PASSWORD</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="パスワードを入力"
+        autocomplete="off"
+      >
+    </div>
+
+    <p id="error-message" class="error-message" aria-live="polite"></p>
+
+    <div class="search-action">
+      <button class="primary-button" onclick="checkPassword()">
+        アクセス
+      </button>
+    </div>
+
+  </section>
+</main>
+
+<!-- =========================
+     フッター（共通）
+     ========================= -->
+<footer class="site-footer search-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
+</footer>
+
+<script>
+  function checkPassword() {
+    const input = document.getElementById("password").value.trim();
+    const error = document.getElementById("error-message");
+
+    if (input === "aitone") {
+      window.location.href = "aitone-mail-list.html";
+    } else {
+      error.textContent =
+        "認証に失敗しました。入力内容を再確認してください。";
+    }
+  }
+</script>
+
+</body>
+</html>
