@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>管理人室 メールボックス｜ARA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 検索限定CSS -->
+  <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+
+<body class="search-mode">
+
+<!-- =========================
+     ナビバー（共通）
+     ========================= -->
+<header class="navbar search-navbar">
+  <div class="nav-left">
+    <a href="../ara.html">
+      <img src="../assets/img/logo_search.png" class="nav-logo" alt="ARAロゴ">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input
+      type="search"
+      class="nav-search"
+      placeholder="検索"
+      onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+    >
+  </div>
+</header>
+
+<!-- =========================
+     メール一覧（Gmail風）
+     ========================= -->
+<main class="search-container">
+  <section class="search-box mail-list">
+
+    <h1 class="search-title">管理人室 – Mailbox</h1>
+    <p class="search-note">
+      個人通信記録 / 内部保存ログ<br>
+      最終更新：不明
+    </p>
+
+    <div class="mail-table">
+
+      <!-- メール1 -->
+      <a href="admin-mail-01.html" class="mail-row">
+        <div class="mail-from">イサク・エノモト</div>
+        <div class="mail-subject">
+          計画の件
+          <span class="mail-snippet">
+            僕の愛するゾーイへ
+          </span>
+        </div>
+        <div class="mail-date">2245.04.30 22:45</div>
+      </a>
+      
+    </div>
+
+  </section>
+</main>
+
+<!-- =========================
+     フッター（共通）
+     ========================= -->
+<footer class="site-footer search-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
+</footer>
+
+</body>
+</html>
