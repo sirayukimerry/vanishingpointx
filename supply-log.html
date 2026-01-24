@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>物資搬入・搬出記録｜ARA内部記録</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 検索限定CSS -->
+  <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+
+<body class="search-mode">
+
+<!-- =========================
+     ナビバー（検索モード）
+     ========================= -->
+<header class="navbar search-navbar">
+  <div class="nav-left">
+    <a href="../ara.html">
+      <img src="../assets/img/logo_search.png" class="nav-logo" alt="ARAロゴ">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input
+      type="search"
+      class="nav-search"
+      placeholder="検索"
+      onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+    >
+  </div>
+</header>
+
+<main class="page search-container">
+
+  <!-- 件数カウンター -->
+  <div class="doc-counter">
+    全 20 件中 09 件目
+  </div>
+
+  <article class="archive-document">
+
+    <h1 class="archive-title">物資搬入・搬出記録</h1>
+    <p class="archive-subtitle">
+      ― 管理小屋 手動記録 ―
+    </p>
+
+    <!-- ログ表 -->
+    <table class="archive-table">
+      <thead>
+        <tr>
+          <th>日時</th>
+          <th>経路</th>
+          <th>内容・重量</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2245.05.01　18:25</td>
+          <td>1階 → 3階</td>
+          <td>清掃用具・約5kg</td>
+        </tr>
+        <tr>
+          <td>2245.05.02　15:12</td>
+          <td>3階 → 1階</td>
+          <td>―・0kg</td>
+        </tr>
+        <tr>
+          <td>2245.05.02　15:12</td>
+          <td>1階 → 3階</td>
+          <td>―・約7kg</td>
+        </tr>
+        <tr>
+          <td>2245.05.03　01:02</td>
+          <td>3階 → 2階</td>
+          <td>アイトネと食糧・約60kg ※深夜帯のため詳細確認なし</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="archive-note">
+      ※ 本ログは管理小屋で保管されていた手動記録を再整理したものであり、<br>
+      操作主体および積載内容の詳細は記録対象外とする。
+    </p>
+
+  </article>
+
+</main>
+
+<!-- =========================
+     フッター（共通）
+     ========================= -->
+<footer class="site-footer search-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
+</footer>
+
+</body>
+</html>
