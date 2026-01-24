@@ -11,7 +11,7 @@ const SEARCH_DOCUMENTS = [
   { id: "06", title: "イサクからダスティンへのメール", keywords: [] , url: "archive/mail-isaku-to-dustin.html" },
   { id: "07", title: "エレベーター仕様書", keywords: ["エレベーター"] , url: "archive/elevator-spec.html" },
   { id: "08", title: "エレベーター使用ログ", keywords: ["エレベーター"] , url: "archive/elevator-log.html" },
-  { id: "09", title: "物資搬入・搬出記録", keywords: ["物資", "搬入", "搬出"] , url: "archive/supply-log.html" },
+  { id: "09", title: "物資搬入・搬出記録", keywords: ["管理小屋"] , url: "archive/supply-log.html" },
   { id: "10", title: "アイトネのメールボックス", keywords: ["アイトネ・バラティエ"] , url: "archive/aitone-mailbox.html" },
   { id: "11", title: "アイトネのメールリスト", keywords: [] , url: "archive/aitone-mail-list.html" },
   { id: "12", title: "イサクからアイトネへのメール", keywords: [] , url: "archive/mail-isaku-to-aitone.html" },
