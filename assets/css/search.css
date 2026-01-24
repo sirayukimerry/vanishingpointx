@@ -1,8 +1,8 @@
 /* =========================
-   検索限定モード 基本設定
+   検索限定モード 基本
    ========================= */
 
-.search-mode {
+body.search-mode {
   background: #000;
   color: #f5e663;
 }
@@ -16,6 +16,12 @@
   border-bottom: 1px solid #333;
 }
 
+/* ロゴは反転で対応（安全） */
+.search-mode .nav-logo {
+  filter: invert(1);
+}
+
+/* ナビリンク */
 .search-mode .nav-center a {
   color: #f5e663;
 }
@@ -24,39 +30,19 @@
   text-shadow: 0 0 6px rgba(245,230,99,0.6);
 }
 
-.search-mode .nav-search {
-  background: #000;
-  color: #f5e663;
-  border: 1px solid #666;
-}
-
-.search-mode .nav-search::placeholder {
-  color: #999;
-}
-
-/* ロゴ差し替え（検索限定） */
-.search-mode .nav-logo {
-  content: url("../assets/img/logo_search.png");
-  height: 40px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  background: transparent;
-}
-
 /* =========================
-   ページ全体レイアウト
+   中央寄せレイアウト
    ========================= */
 
-.search-mode .page {
+.search-container {
+  min-height: calc(100vh - 56px - 120px);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 56px - 120px);
 }
 
 /* =========================
-   メールボックス認証 UI
+   メールボックス認証
    ========================= */
 
 .search-box {
@@ -114,22 +100,11 @@
 }
 
 /* =========================
-   エラーメッセージ
-   ========================= */
-
-.error-message {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #ff6b6b;
-}
-
-/* =========================
-   アクションボタン
+   ボタン
    ========================= */
 
 .search-action {
   margin-top: 32px;
-  text-align: center;
 }
 
 .search-mode .primary-button {
@@ -144,7 +119,7 @@
 }
 
 /* =========================
-   フッター（検索限定）
+   フッター
    ========================= */
 
 .search-mode .site-footer {
