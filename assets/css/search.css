@@ -215,3 +215,33 @@ body.search-mode .primary-button:hover {
   top: 88px;              /* ナビバー下 */
   right: 24px;
 }
+
+/* =========================
+   検索結果のページ
+   ========================= */
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+}
+
+.result-list li {
+  margin-bottom: 12px;
+}
+
+.result-list a {
+  color: #0fc;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+}
+
+.result-list a:hover {
+  text-decoration: underline;
+}
+
+.result-id {
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
