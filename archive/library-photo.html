@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>館の図書室に落ちていた写真｜ARA内部記録</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 検索限定CSS -->
+  <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+
+<body class="search-mode">
+
+<!-- =========================
+     ナビバー（検索モード）
+     ========================= -->
+<header class="navbar search-navbar">
+  <div class="nav-left">
+    <a href="../ara.html">
+      <img src="../assets/img/logo_search.png" class="nav-logo" alt="ARAロゴ">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input
+      type="search"
+      class="nav-search"
+      placeholder="検索"
+      onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+    >
+  </div>
+</header>
+
+<main class="page search-container">
+
+  <!-- 件数カウンター -->
+  <div class="doc-counter">
+    全 20 件中 06 件目
+  </div>
+
+  <!-- 写真本体 -->
+  <article class="archive-document">
+
+    <h1 class="archive-title">館の図書室に落ちていた写真</h1>
+    <p class="archive-subtitle">
+      ― 内部資料 ―
+    </p>
+
+    <div class="archive-image">
+      <img
+        src="../assets/img/archive/fphoto.jpg"
+        alt="図書室の落下写真"
+        style="max-width:90%; height:auto; display:block; margin:0 auto;"
+      >
+    </div>
+
+    <p class="archive-note">
+      ※ 本資料は館内調査用に記録されたものであり、<br>
+      閲覧・転載は制限されています。
+    </p>
+
+  </article>
+
+</main>
+
+<!-- =========================
+     フッター（共通）
+     ========================= -->
+<footer class="site-footer search-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
+</footer>
+
+</body>
+</html>
