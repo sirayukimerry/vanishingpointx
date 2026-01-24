@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Mail Log No.1｜ARA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 検索限定CSS -->
+  <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+
+<body class="search-mode">
+
+<!-- =========================
+     ナビバー（検索モード）
+     ========================= -->
+<header class="navbar search-navbar">
+  <div class="nav-left">
+    <a href="../ara.html">
+      <img src="../assets/img/logo_search.png" class="nav-logo" alt="ARAロゴ">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input
+      type="search"
+      class="nav-search"
+      placeholder="検索"
+      onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+    >
+  </div>
+</header>
+
+<main class="page search-container">
+
+  <!-- 件数表示 -->
+  <div class="doc-counter">
+    全 20 件中 06 件目
+  </div>
+
+  <!-- メール本文 -->
+  <article class="mail-body">
+
+    <h1 class="mail-title">メールログ No.1</h1>
+
+    <div class="mail-meta">
+      <p><strong>送信者：</strong>イサク・エノモト</p>
+      <p><strong>宛先：</strong>ダスティン・マクマホン</p>
+      <p><strong>日時：</strong>2245.04.30 11:02</p>
+    </div>
+
+    <div class="mail-content">
+      <p>ダスティン、<br>
+      例の件だ。</p>
+
+      <p>
+        5月3日午前1時、2階のエレベーターを作動させて<br>
+        荷物を物置へ移動してほしい。
+      </p>
+
+      <p>
+        操作は1階か2階からのみ可能なはずだ。<br>
+        3階からは動かせない。
+      </p>
+
+      <p>
+        報酬については、<br>
+        無事に終わったあとで話そう。
+      </p>
+
+      <p class="mail-sign">
+        ― イサク
+      </p>
+    </div>
+
+  </article>
+
+</main>
+
+<!-- =========================
+     フッター（共通）
+     ========================= -->
+<footer class="site-footer search-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
+</footer>
+
+</body>
+</html>
