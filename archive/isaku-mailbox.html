@@ -31,8 +31,14 @@
   </nav>
 
   <div class="nav-right">
-    <input type="search" class="nav-search" placeholder="検索">
-  </div>
+  <input
+    type="search"
+    class="nav-search"
+    placeholder="検索"
+    onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+  >
+</div>
+
 </header>
 
 <!-- =========================
