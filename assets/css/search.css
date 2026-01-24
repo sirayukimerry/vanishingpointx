@@ -1,198 +1,15 @@
-/* ===================================================
-   search.css
-   検索レイヤー専用スタイル
-   （非公式・異常・残存ログ）
-   =================================================== */
-
 /* =========================
-   全体トーン
+   検索限定モード 基本設定
    ========================= */
 
-body {
-  background-color: #000;
-  color: #f5e642;
-}
-
-/* 余白と可読性 */
-main {
-  background: transparent;
-}
-
-/* =========================
-   テキスト類
-   ========================= */
-
-p,
-li,
-td,
-th,
-label,
-textarea,
-input,
-select {
-  color: #f5e642;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: #fff3a0;
-  letter-spacing: 0.12em;
-}
-
-/* =========================
-   リンク
-   ========================= */
-
-a {
-  color: #f5e642;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #fff3a0;
-}
-
-/* =========================
-   ナビバー
-   ========================= */
-
-.navbar {
+.search-mode {
   background: #000;
-  border-bottom: 1px solid #333;
-}
-
-.navbar a {
-  color: #f5e642;
-}
-
-.nav-logo {
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
-}
-
-/* 検索窓 */
-.nav-search {
-  background: #111;
-  color: #f5e642;
-  border: 1px solid #555;
-}
-
-.nav-search::placeholder {
-  color: #888;
+  color: #f5e663;
 }
 
 /* =========================
-   フッター
+   ナビバー（検索限定）
    ========================= */
-
-footer,
-.footer {
-  background: #000;
-  border-top: 1px solid #333;
-  color: #888;
-}
-
-footer a {
-  color: #f5e642;
-}
-
-/* search.css */
-
-.site-footer {
-  background: #000;
-  border-top: 1px solid #333;
-}
-
-.footer-note,
-.footer-copy {
-  color: #f5e663; /* 黄色 */
-}
-
-
-/* =========================
-   テーブル（メール・ログ）
-   ========================= */
-
-table {
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border: 1px solid #444;
-  padding: 10px;
-}
-
-/* =========================
-   ボタン
-   ========================= */
-
-button,
-input[type="button"],
-input[type="submit"] {
-  background: #111;
-  color: #f5e642;
-  border: 1px solid #666;
-}
-
-button:hover {
-  background: #222;
-}
-
-/* =========================
-   入力フォーム
-   ========================= */
-
-input,
-textarea {
-  background: #111;
-  border: 1px solid #555;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #f5e642;
-}
-
-/* =========================
-   検索結果専用
-   ========================= */
-
-.search-result-item {
-  border-bottom: 1px solid #333;
-  padding: 16px 0;
-}
-
-.search-result-item small {
-  color: #aaa;
-}
-
-/* =========================
-   不穏さの演出（任意）
-   ========================= */
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0) 60%,
-    rgba(0,0,0,0.4) 100%
-  );
-}
-
-/* =========================
-   検索限定：ロゴ差し替え
-   ========================= */
-
-.search-mode .nav-logo {
-  content: url("../assets/img/logo_search.png");
-}
 
 .search-mode .navbar {
   background: #000;
@@ -203,8 +20,139 @@ body::after {
   color: #f5e663;
 }
 
+.search-mode .nav-center a:hover {
+  text-shadow: 0 0 6px rgba(245,230,99,0.6);
+}
+
 .search-mode .nav-search {
   background: #000;
   color: #f5e663;
-  border-color: #666;
+  border: 1px solid #666;
+}
+
+.search-mode .nav-search::placeholder {
+  color: #999;
+}
+
+/* ロゴ差し替え（検索限定） */
+.search-mode .nav-logo {
+  content: url("../assets/img/logo_search.png");
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* =========================
+   ページ全体レイアウト
+   ========================= */
+
+.search-mode .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 56px - 120px);
+}
+
+/* =========================
+   メールボックス認証 UI
+   ========================= */
+
+.search-box {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+.search-title {
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  margin-bottom: 24px;
+}
+
+.search-note {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.search-warning {
+  font-size: 13px;
+  margin-bottom: 24px;
+  color: #d6c85a;
+}
+
+/* =========================
+   パスワード入力
+   ========================= */
+
+.password-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.password-box label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+
+.password-box input {
+  width: 260px;
+  padding: 8px 10px;
+  background: #000;
+  color: #f5e663;
+  border: 1px solid #666;
+}
+
+.password-box input:focus {
+  outline: none;
+  border-color: #f5e663;
+}
+
+/* =========================
+   エラーメッセージ
+   ========================= */
+
+.error-message {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #ff6b6b;
+}
+
+/* =========================
+   アクションボタン
+   ========================= */
+
+.search-action {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.search-mode .primary-button {
+  background: transparent;
+  color: #f5e663;
+  border: 1px solid #f5e663;
+}
+
+.search-mode .primary-button:hover {
+  background: #f5e663;
+  color: #000;
+}
+
+/* =========================
+   フッター（検索限定）
+   ========================= */
+
+.search-mode .site-footer {
+  background: #000;
+  border-top: 1px solid #333;
+}
+
+.search-mode .footer-note,
+.search-mode .footer-copy {
+  color: #f5e663;
 }
