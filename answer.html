@@ -71,7 +71,42 @@
 .modal-submit:hover {
   background: #000;
 }
+   /* =========================
+       被害者ー殺人犯入力欄
+       ========================= */
+.report-table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
 
+.report-table th {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  padding: 8px 10px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.report-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.report-table input {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+    .table-note {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 0.04em;
+}
 
     /* =========================
        アノマリー入力欄調整
@@ -157,15 +192,31 @@
     <h2>死亡事案の整理</h2>
     <p>被害者名と殺害者名を対応させて記述せよ。（氏名はフルネーム指定）</p>
 
-    <table class="report-table" id="killTable">
-      <tr><td><input></td><td><input></td></tr>
-      <tr><td><input></td><td><input></td></tr>
-      <tr><td><input></td><td><input></td></tr>
-      <tr><td><input></td><td><input></td></tr>
-      <tr><td><input></td><td><input></td></tr>
-      <tr><td><input></td><td><input></td></tr>
-      <tr><td><input></td><td><input></td></tr>
-    </table>
+   <table class="report-table" id="killTable">
+  <thead>
+    <tr>
+      <th>
+  被害者<br>
+  <span class="table-note">（死亡が確認された者）</span>
+</th>
+<th>
+  殺害者<br>
+  <span class="table-note">（加害が推定される者）</span>
+</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><input></td><td><input></td></tr>
+    <tr><td><input></td><td><input></td></tr>
+    <tr><td><input></td><td><input></td></tr>
+    <tr><td><input></td><td><input></td></tr>
+    <tr><td><input></td><td><input></td></tr>
+    <tr><td><input></td><td><input></td></tr>
+    <tr><td><input></td><td><input></td></tr>
+  </tbody>
+</table>
+
   </section>
 
   <!-- =========================
