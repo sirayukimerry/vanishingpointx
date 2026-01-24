@@ -98,6 +98,19 @@ footer a {
   color: #f5e642;
 }
 
+/* search.css */
+
+.site-footer {
+  background: #000;
+  border-top: 1px solid #333;
+}
+
+.footer-note,
+.footer-copy {
+  color: #f5e663; /* 黄色 */
+}
+
+
 /* =========================
    テーブル（メール・ログ）
    ========================= */
