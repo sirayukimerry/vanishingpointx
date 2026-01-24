@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>昇降設備仕様書｜ARA内部記録</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 検索限定CSS -->
+  <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+
+<body class="search-mode">
+
+<!-- =========================
+     ナビバー（検索モード）
+     ========================= -->
+<header class="navbar search-navbar">
+  <div class="nav-left">
+    <a href="../ara.html">
+      <img src="../assets/img/logo_search.png" class="nav-logo" alt="ARAロゴ">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input
+      type="search"
+      class="nav-search"
+      placeholder="検索"
+      onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+    >
+  </div>
+</header>
+
+<main class="page search-container">
+
+  <!-- 件数カウンター -->
+  <div class="doc-counter">
+    全 20 件中 07 件目
+  </div>
+
+  <article class="archive-document">
+
+    <h1 class="archive-title">昇降設備 仕様書</h1>
+    <p class="archive-subtitle">
+      ― 館内設備資料 ―
+    </p>
+
+  
+    <!-- 補足テキスト -->
+    <div class="archive-text">
+      <p>
+        本昇降設備は、館内における物資搬入・搬出を目的として
+        設計されたものである。
+      </p>
+
+      <p>
+        操作は<strong>第1階および第2階操作盤からのみ可能</strong>であり、<br>
+        <strong>第3階からの起動・制御は想定されていない</strong>。
+      </p>
+
+      <p>
+        最大積載荷重は <strong>100kg以内</strong> とし、<br>
+        規定値を超える使用は機構の損傷および
+        安全性の低下を招く恐れがある。
+      </p>
+
+      <p>
+        内部空間は、標準的な搬入物の積載を前提とした
+        容積を確保しており、<br>
+        一時的な作業に必要な可動域が考慮されている。
+      </p>
+
+      <p class="archive-note">
+        ※ 本設備は常設利用を目的としたものではなく、<br>
+        運用時には必ず管理規定を遵守すること。
+      </p>
+    </div>
+
+  </article>
+
+</main>
+
+<!-- =========================
+     フッター（共通）
+     ========================= -->
+<footer class="site-footer search-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
+</footer>
+
+</body>
+</html>
