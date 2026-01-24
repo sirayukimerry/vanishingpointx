@@ -2,31 +2,32 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Isaku Enomoto｜Mailbox</title>
+  <title>Isaku Mailbox｜ARA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- 共通CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
-  <!-- 検索専用CSS -->
+  <!-- 検索限定CSS -->
   <link rel="stylesheet" href="../assets/css/search.css">
 </head>
-<body>
+
+<body class="search-mode">
 
 <!-- =========================
      ナビバー（共通）
      ========================= -->
 <header class="navbar">
   <div class="nav-left">
-    <a href="index.html">
+    <a href="../ara.html">
       <img src="../assets/img/logo.png" class="nav-logo" alt="ARAロゴ">
     </a>
   </div>
 
   <nav class="nav-center">
-    <a href="index.html">ホーム</a>
-    <a href="staff.html">職員照会</a>
-    <a href="archive.html">アーカイブ</a>
-    <a href="individual.html">マイページ</a>
+    <a href="../index.html">ホーム</a>
+    <a href="../staff.html">職員照会</a>
+    <a href="../archive.html">アーカイブ</a>
+    <a href="../individual.html">マイページ</a>
   </nav>
 
   <div class="nav-right">
@@ -35,59 +36,63 @@
 </header>
 
 <!-- =========================
-     メイン（メール一覧）
+     メール一覧（Gmail風）
      ========================= -->
-<main class="page">
+<main class="search-container">
+  <section class="search-box mail-list">
 
-  <section style="max-width:900px;margin:120px auto 0;">
+    <h1 class="search-title">Isaku Enomoto – Mailbox</h1>
+    <p class="search-note">
+      個人通信記録 / 内部保存ログ<br>
+      最終更新：不明
+    </p>
 
-    <h1 style="font-size:18px;margin-bottom:24px;letter-spacing:0.08em;">
-      受信トレイ
-    </h1>
+    <div class="mail-table">
 
-    <table class="mail-table" style="width:100%;border-collapse:collapse;">
+      <!-- メール1 -->
+      <a href="mail-isaku-to-amber.html" class="mail-row">
+        <div class="mail-from">Isaku Enomoto</div>
+        <div class="mail-subject">
+          【Re:】あの件について
+          <span class="mail-snippet">
+            ……君には、もう隠せないと思う。
+          </span>
+        </div>
+        <div class="mail-date">03/14</div>
+      </a>
 
-      <!-- Amber -->
-      <tr class="mail-row important"
-          onclick="location.href='mail-isaku-to-amber.html'">
-        <td style="width:220px;">
-          Amber Yates
-        </td>
-        <td>
-          <strong>相談したいことがある</strong><br>
-          他の者には知られたくない。
-        </td>
-        <td style="width:120px;">
-          5/2 23:48
-        </td>
-      </tr>
+      <!-- メール2 -->
+      <a href="mail-isaku-to-dustin.html" class="mail-row">
+        <div class="mail-from">Isaku Enomoto</div>
+        <div class="mail-subject">
+          確認してほしい
+          <span class="mail-snippet">
+            記録が改ざんされている可能性がある。
+          </span>
+        </div>
+        <div class="mail-date">03/09</div>
+      </a>
 
-      <!-- Dustin -->
-      <tr class="mail-row important"
-          onclick="location.href='mail-isaku-to-dustin.html'">
-        <td>
-          Dustin McMahon
-        </td>
-        <td>
-          <strong>2階エレベーターの運用について</strong><br>
-          念のため、時間を指定する。
-        </td>
-        <td>
-          5/3 00:12
-        </td>
-      </tr>
+    </div>
 
-    </table>
+    <p class="search-warning">
+      ※本メールボックスの内容は、正式な外部公開を想定していません。
+    </p>
 
   </section>
-
 </main>
 
 <!-- =========================
-     フッター
+     フッター（共通）
      ========================= -->
-<footer class="footer" style="margin-top:120px;">
-  <p>ARA Internal Mail System / Restricted Access</p>
+<footer class="site-footer">
+  <div class="footer-bar"></div>
+  <p class="footer-note">
+    このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
+  </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
 </footer>
 
 </body>
