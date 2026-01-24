@@ -30,9 +30,15 @@
     <a href="../individual.html">マイページ</a>
   </nav>
 
-  <div class="nav-right">
-    <input type="search" class="nav-search" placeholder="検索">
-  </div>
+ <div class="nav-right">
+  <input
+    type="search"
+    class="nav-search"
+    placeholder="検索"
+    onkeydown="if(event.key==='Enter'){location.href='../search.html?q='+this.value}"
+  >
+</div>
+
 </header>
 
 <!-- =========================
