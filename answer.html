@@ -271,14 +271,12 @@
        提出ボタン
        ========================= -->
   <section class="document-section submit-section">
-   <button
-  class="modal-submit"
-  id="finalSubmitBtn"
-  onclick="finalSubmit()"
-  disabled
->
+   <button type="button"
+        class="primary-button"
+        onclick="openConfirmModal()">
   提出する
 </button>
+
 
   </section>
 
@@ -304,9 +302,22 @@
       <strong>一切の責任を負うものとします。</strong>
     </p>
 
+     <p id="decisionWarning"
+     style="color:#b00020; font-size:13px;">
+    ※ 再発防止策が選択されていません
+  </p>
+    
     <div class="modal-actions">
       <button onclick="closeModal()">戻って修正する</button>
-      <button class="modal-submit" onclick="finalSubmit()">提出する</button>
+      <button
+  class="modal-submit"
+  id="finalSubmitBtn"
+  onclick="finalSubmit()"
+  disabled
+>
+  提出する
+</button>
+
     </div>
   </div>
 </div>
@@ -349,11 +360,11 @@ const anomalyCorrect = ["アイトネ・バラティエ"];
 const modal = document.getElementById("confirmModal");
 
 function openConfirmModal() {
-  modal.style.display = "flex";
+  document.getElementById("confirmModal").style.display = "flex";
 }
 
 function closeModal() {
-  modal.style.display = "none";
+  document.getElementById("confirmModal").style.display = "none";
 }
 
 /* =========================
@@ -429,6 +440,18 @@ decisionRadios.forEach(radio => {
     finalSubmitBtn.disabled = false;
   });
 });
+
+const warning = document.getElementById("decisionWarning");
+
+decisionRadios.forEach(radio => {
+  radio.addEventListener("change", () => {
+    finalSubmitBtn.disabled = false;
+    if (warning) warning.style.display = "none";
+  });
+});
+
+
+
 
 </script>
 
