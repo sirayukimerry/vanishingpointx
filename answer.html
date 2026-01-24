@@ -71,6 +71,19 @@
 .modal-submit:hover {
   background: #000;
 }
+
+    /* =========================
+   モーダル提出ボタンガード
+   ========================= */
+
+.modal-submit:disabled {
+  background: #888;
+  color: #222;
+  border-color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
    /* =========================
        被害者ー殺人犯入力欄
        ========================= */
@@ -258,9 +271,15 @@
        提出ボタン
        ========================= -->
   <section class="document-section submit-section">
-    <button type="button" class="primary-button" onclick="openConfirmModal()">
-      提出する
-    </button>
+   <button
+  class="modal-submit"
+  id="finalSubmitBtn"
+  onclick="finalSubmit()"
+  disabled
+>
+  提出する
+</button>
+
   </section>
 
 </main>
@@ -395,6 +414,22 @@ function finalSubmit() {
     window.location.href = "epilog.html";
   }, 1600);
 }
+
+/* =========================
+   最終判断チェックガード
+   ========================= */
+
+const decisionRadios = document.querySelectorAll(
+  'input[name="finalDecision"]'
+);
+const finalSubmitBtn = document.getElementById("finalSubmitBtn");
+
+decisionRadios.forEach(radio => {
+  radio.addEventListener("change", () => {
+    finalSubmitBtn.disabled = false;
+  });
+});
+
 </script>
 
 </body>
