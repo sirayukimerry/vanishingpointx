@@ -2,15 +2,40 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>内部調査報告書｜ARA 職員用ポータル</title>
+  <title>内部調査報告書｜ARA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- 共通CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
-    /* =========================
-       モーダル（最終通告）
-       ========================= */
+    /* ===== 表（死亡事案） ===== */
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    .report-table th,
+    .report-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    .report-table th {
+      background: #f0f0f0;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+    .report-table input {
+      width: 95%;
+      padding: 6px;
+    }
+
+    /* ===== 提出ボタン中央寄せ ===== */
+    .submit-center {
+      text-align: center;
+    }
+
+    /* ===== モーダル ===== */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -20,29 +45,21 @@
       justify-content: center;
       z-index: 2000;
     }
-
     .modal {
       background: #fff;
       max-width: 520px;
       padding: 32px;
       border: 1px solid #ccc;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
     }
-
     .modal h2 {
       font-size: 14px;
       letter-spacing: 0.12em;
       margin-bottom: 20px;
     }
-
     .modal p {
       font-size: 14px;
       line-height: 1.9;
       margin-bottom: 16px;
-    }
-
-    .modal strong {
-      color: #b00020;
     }
 
     .modal-actions {
@@ -52,118 +69,46 @@
       margin-top: 24px;
     }
 
-    .modal-actions button {
-      padding: 10px 20px;
-      font-size: 13px;
+    /* ★ モーダル内提出ボタン（常に見える） */
+    .modal-submit {
+      background: #eee;
+      color: #000;
       border: 1px solid #333;
+      padding: 10px 20px;
+      cursor: not-allowed;
+      opacity: 0.4;
+    }
+    .modal-submit.enabled {
+      background: #111;
+      color: #fff;
       cursor: pointer;
-      background: #fff;
+      opacity: 1;
     }
 
-  .modal-submit {
-  background: #111;
-  color: #fff;
-  border: 1px solid #111;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-}
-
-.modal-submit:hover {
-  background: #000;
-}
-
-    /* =========================
-   モーダル提出ボタンガード
-   ========================= */
-
-.modal-submit:disabled {
-  background: #888;
-  color: #222;
-  border-color: #666;
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
-   /* =========================
-       被害者ー殺人犯入力欄
-       ========================= */
-.report-table {
-  width: 100%;
-  max-width: 700px;
-  border-collapse: collapse;
-  margin-top: 16px;
-}
-
-.report-table th {
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  text-align: left;
-  padding: 8px 10px;
-  background: #f0f0f0;
-  border-bottom: 1px solid #ccc;
-}
-
-.report-table td {
-  padding: 6px 8px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.report-table input {
-  width: 100%;
-  padding: 6px 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-}
-
-    .table-note {
-  font-size: 11px;
-  color: #666;
-  letter-spacing: 0.04em;
-}
-
-    /* =========================
-       アノマリー入力欄調整
-       ========================= */
-    #anomalyAnswer {
-      width: 100%;
-      max-width: 600px;
-      min-height: 48px;
-      padding: 8px 10px;
-      font-size: 14px;
-      line-height: 1.6;
-      resize: vertical;
+    .guard-text {
+      font-size: 12px;
+      color: #b00020;
+      margin-top: 12px;
+      display: none;
     }
 
-    /* =========================
-       提出後演出オーバーレイ
-       ========================= */
+    /* ===== 提出後演出 ===== */
     .submit-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.85);
-      display: flex;
+      background: #000;
+      color: #fff;
+      display: none;
       align-items: center;
       justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
       z-index: 3000;
-    }
-
-    .submit-overlay.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .submit-text {
-      color: #eaeaea;
-      font-size: 14px;
-      letter-spacing: 0.12em;
       text-align: center;
     }
-
+    .submit-overlay.active {
+      display: flex;
+    }
     .hidden {
-      opacity: 0;
+      display: none;
     }
 
     .lock-scroll {
@@ -174,167 +119,90 @@
 
 <body>
 
-<!-- =========================
-     ナビバー
-     ========================= -->
-<header class="navbar">
-  <div class="nav-left">
-    <a href="ara.html">
-      <img src="assets/img/logo.png" class="nav-logo" alt="ARAロゴ">
-    </a>
-  </div>
-  <nav class="nav-center">
-    <a href="index.html">ホーム</a>
-    <a href="staff.html">職員照会</a>
-    <a href="archive.html">アーカイブ</a>
-    <a href="individual.html">マイページ</a>
-  </nav>
-  <div class="nav-right">
-    <input type="search" class="nav-search" placeholder="検索">
-  </div>
-</header>
-
 <main class="page document-page">
 
   <h1 class="document-title">内部調査報告書</h1>
 
-  <!-- =========================
-       死亡事案の整理
-       ========================= -->
+  <!-- ===== 死亡事案 ===== -->
   <section class="document-section">
     <h2>死亡事案の整理</h2>
-    <p>被害者名と殺害者名を対応させて記述せよ。（氏名はフルネーム指定）</p>
 
-   <table class="report-table" id="killTable">
-  <thead>
-    <tr>
-      <th>
-  被害者<br>
-  <span class="table-note">（死亡が確認された者）</span>
-</th>
-<th>
-  殺害者<br>
-  <span class="table-note">（加害が推定される者）</span>
-</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><input></td><td><input></td></tr>
-    <tr><td><input></td><td><input></td></tr>
-    <tr><td><input></td><td><input></td></tr>
-    <tr><td><input></td><td><input></td></tr>
-    <tr><td><input></td><td><input></td></tr>
-    <tr><td><input></td><td><input></td></tr>
-    <tr><td><input></td><td><input></td></tr>
-  </tbody>
-</table>
-
+    <table class="report-table" id="killTable">
+      <tr>
+        <th>被害者</th>
+        <th>殺害者</th>
+      </tr>
+      <tr><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td></tr>
+    </table>
   </section>
 
-  <!-- =========================
-       アノマリーの所在
-       ========================= -->
+  <!-- ===== アノマリー ===== -->
   <section class="document-section">
-    <h2>アノマリーの所在（氏名はフルネーム指定）</h2>
-    <textarea id="anomalyAnswer"></textarea>
+    <h2>アノマリーの所在</h2>
+    <textarea id="anomalyAnswer" rows="4" style="width:100%"></textarea>
   </section>
 
-  <!-- =========================
-       再発防止策
-       ========================= -->
+  <!-- ===== 再発防止策 ===== -->
   <section class="document-section document-secret">
     <h2>再発防止策の選択</h2>
 
-    <p>
-      同様の事案を防ぐため、<br>
-      ARAが最優先で取るべき対応を選択せよ。
-    </p>
-
     <label>
-      <input type="radio" name="finalDecision">
-      アノマリーの完全破壊
+      <input type="radio" name="finalDecision"> アノマリーの完全破壊
     </label><br>
-
     <label>
-      <input type="radio" name="finalDecision">
-      管理・運用体制の見直し
+      <input type="radio" name="finalDecision"> 管理・運用体制の見直し
     </label><br>
-
     <label>
-      <input type="radio" name="finalDecision">
-      判断不能（保留）
+      <input type="radio" name="finalDecision"> 判断不能（保留）
     </label>
   </section>
 
-  <!-- =========================
-       提出ボタン
-       ========================= -->
-  <section class="document-section submit-section">
-   <button type="button"
-        class="primary-button"
-        onclick="openConfirmModal()">
-  提出する
-</button>
-
-
+  <!-- ===== ページ提出（①） ===== -->
+  <section class="document-section submit-center">
+    <button class="primary-button" onclick="openConfirmModal()">
+      提出する
+    </button>
   </section>
 
 </main>
 
-<!-- =========================
-     最終確認モーダル
-     ========================= -->
+<!-- ===== モーダル ===== -->
 <div class="modal-overlay" id="confirmModal">
   <div class="modal">
     <h2>最終確認</h2>
 
     <p>
       本報告を提出した場合、<br>
-      <strong>内容の修正および再提出はできません。</strong>
-    </p>
-    <p>
-      本判断は当機関の<strong>公式記録</strong>として保存され、<br>
-      <strong>今後の対応方針に影響を与える可能性があります。</strong>
-    </p>
-    <p>
-      提出者は、本報告に含まれる判断について<br>
-      <strong>一切の責任を負うものとします。</strong>
+      内容の修正および再提出はできません。
     </p>
 
-     <p id="decisionWarning"
-     style="color:#b00020; font-size:13px;">
-    ※ 再発防止策が選択されていません
-  </p>
-    
+    <!-- 🔴④ 未選択ガード表示 -->
+    <p class="guard-text" id="guardText">
+      ※ 再発防止策を選択してください
+    </p>
+
     <div class="modal-actions">
-      <button onclick="closeModal()">戻って修正する</button>
-      <button
-  class="modal-submit"
-  id="finalSubmitBtn"
-  onclick="finalSubmit()"
-  disabled
->
-  提出する
-</button>
+      <button onclick="closeModal()">戻る</button>
 
+      <!-- 🔴② 最終提出ボタン -->
+      <button id="finalSubmitBtn" class="modal-submit">
+        提出する
+      </button>
     </div>
   </div>
 </div>
 
-<!-- =========================
-     提出後演出オーバーレイ
-     ========================= -->
-<div id="submit-overlay" class="submit-overlay" aria-hidden="true">
-  <div class="submit-text">
-    <p id="submit-line-1">報告書を提出しています…</p>
-    <p id="submit-line-2" class="hidden">
-      本判断は、<br>
-      ARAの公式記録として保存されます。
-    </p>
-    <p id="submit-line-3" class="hidden">
-      評価を算出しています…
-    </p>
+<!-- ===== 提出後演出 ===== -->
+<div id="submit-overlay" class="submit-overlay">
+  <div>
+    <p>報告書を提出しています…</p>
+    <p id="line2" class="hidden">評価を算出しています…</p>
   </div>
 </div>
 
@@ -355,104 +223,74 @@ const correctPairs = [
 const anomalyCorrect = ["アイトネ・バラティエ"];
 
 /* =========================
-   モーダル制御
+   モーダル開閉（①）
    ========================= */
-const modal = document.getElementById("confirmModal");
-
 function openConfirmModal() {
   document.getElementById("confirmModal").style.display = "flex";
 }
-
 function closeModal() {
   document.getElementById("confirmModal").style.display = "none";
 }
 
 /* =========================
-   最終提出処理
+   🔴④ 未選択ガード
    ========================= */
-function finalSubmit() {
-  modal.style.display = "none";
+const radios = document.querySelectorAll('input[name="finalDecision"]');
+const submitBtn = document.getElementById("finalSubmitBtn");
+const guardText = document.getElementById("guardText");
 
-  let score = 0;
-  let remainingPairs = [...correctPairs];
-
-  // 殺害対応（順不同・重複不可）
-  const rows = document.querySelectorAll("#killTable tr");
-  rows.forEach(row => {
-    const v = row.children[0].querySelector("input").value.trim();
-    const k = row.children[1].querySelector("input").value.trim();
-
-    const index = remainingPairs.findIndex(
-      p => p[0] === v && p[1] === k
-    );
-
-    if (index !== -1) {
-      score += 10;
-      remainingPairs.splice(index, 1);
-    }
+radios.forEach(r => {
+  r.addEventListener("change", () => {
+    submitBtn.classList.add("enabled");
+    submitBtn.disabled = false;
+    guardText.style.display = "none";
   });
+});
 
-  // アノマリー（30点）
-  const anomaly = document.getElementById("anomalyAnswer").value.trim();
-  if (anomalyCorrect.some(a => anomaly.includes(a))) {
-    score += 30;
+/* =========================
+   🔴★本命：最終提出処理
+   ========================= */
+submitBtn.addEventListener("click", () => {
+  if (!submitBtn.classList.contains("enabled")) {
+    guardText.style.display = "block";
+    return;
   }
 
-  // ランク判定
+  // スクロール拘束＋演出
+  document.body.classList.add("lock-scroll");
+  document.getElementById("confirmModal").style.display = "none";
+
+  const overlay = document.getElementById("submit-overlay");
+  overlay.classList.add("active");
+
+  setTimeout(() => {
+    document.getElementById("line2").classList.remove("hidden");
+  }, 600);
+
+  // 採点
+  let score = 0;
+  document.querySelectorAll("#killTable tr").forEach((row, i) => {
+    if (i === 0) return;
+    const v = row.children[0].querySelector("input").value.trim();
+    const k = row.children[1].querySelector("input").value.trim();
+    if (correctPairs.some(p => p[0] === v && p[1] === k)) score += 10;
+  });
+
+  const anomaly = document.getElementById("anomalyAnswer").value;
+  if (anomalyCorrect.some(a => anomaly.includes(a))) score += 30;
+
   let rank = "C";
   if (score === 100) rank = "S";
   else if (score >= 80) rank = "A";
   else if (score >= 50) rank = "B";
 
-  // 結果保存
   sessionStorage.setItem("score", score);
   sessionStorage.setItem("rank", rank);
-
-  // 演出開始
-  document.body.classList.add("lock-scroll");
-  const overlay = document.getElementById("submit-overlay");
-  overlay.classList.add("active");
-
-  setTimeout(() => {
-    document.getElementById("submit-line-2").classList.remove("hidden");
-  }, 500);
-
-  setTimeout(() => {
-    document.getElementById("submit-line-3").classList.remove("hidden");
-  }, 1000);
 
   setTimeout(() => {
     window.location.href = "epilog.html";
   }, 1600);
-}
-
-/* =========================
-   最終判断チェックガード
-   ========================= */
-
-const decisionRadios = document.querySelectorAll(
-  'input[name="finalDecision"]'
-);
-const finalSubmitBtn = document.getElementById("finalSubmitBtn");
-
-decisionRadios.forEach(radio => {
-  radio.addEventListener("change", () => {
-    finalSubmitBtn.disabled = false;
-  });
 });
-
-const warning = document.getElementById("decisionWarning");
-
-decisionRadios.forEach(radio => {
-  radio.addEventListener("change", () => {
-    finalSubmitBtn.disabled = false;
-    if (warning) warning.style.display = "none";
-  });
-});
-
-
-
-
 </script>
 
 </body>
