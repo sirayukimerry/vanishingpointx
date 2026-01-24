@@ -2,15 +2,16 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Isaku Enomoto Mailbox｜Restricted Access</title>
+  <title>Isaku Mailbox Access｜ARA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 通常CSS -->
+  <!-- 共通CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
-  <!-- 検索専用CSS -->
+  <!-- 検索限定CSS -->
   <link rel="stylesheet" href="../assets/css/search.css">
 </head>
-<body>
+
+<body class="search-mode">
 
 <!-- =========================
      ナビバー（共通）
@@ -18,7 +19,7 @@
 <header class="navbar">
   <div class="nav-left">
     <a href="../ara.html">
-      <img src="../assets/img/logo_search.png" class="nav-logo" alt="ARAロゴ">
+      <img src="../assets/img/logo.png" class="nav-logo" alt="ARAロゴ">
     </a>
   </div>
 
@@ -34,48 +35,43 @@
   </div>
 </header>
 
-<!-- =========================
-     メイン
-     ========================= -->
 <main class="page">
 
-  <section style="max-width:520px;margin:120px auto 0;">
+  <section class="search-box">
+    <h1 class="search-title">メールボックス認証</h1>
 
-    <h1 style="font-size:18px;margin-bottom:24px;">
-      個人メールボックスへのアクセス
-    </h1>
-
-    <p style="line-height:1.9;margin-bottom:32px;">
-      このフォルダは <strong>ARA職員 イサク・エノモト</strong> に  
-      個人的に割り当てられていたメール領域です。<br><br>
-
-      本来、第三者による閲覧は想定されていません。
+    <p class="search-note">
+      本領域は、ARA職員イサク・エノモトの<br>
+      個人通信記録を含みます。
     </p>
 
-    <div style="margin-bottom:24px;">
-      <label for="password">パスワード</label><br>
+    <p class="search-warning">
+      アクセスには認証が必要です。
+    </p>
+
+    <div class="password-box">
+      <label for="password">PASSWORD</label>
       <input
         type="password"
         id="password"
-        style="width:100%;padding:12px;margin-top:8px;"
-        placeholder="Password">
+        placeholder="パスワードを入力"
+        autocomplete="off"
+      >
     </div>
 
-    <button onclick="checkPassword()" style="width:100%;padding:12px;">
-      メールボックスを開く
-    </button>
+    <p id="error-message" class="error-message" aria-live="polite"></p>
 
-    <p id="error" style="margin-top:24px;color:#ff6b6b;display:none;">
-      パスワードが違います。<br>
-      この操作は記録されています。
-    </p>
-
+    <div class="search-action">
+      <button class="primary-button" onclick="checkPassword()">
+        アクセス
+      </button>
+    </div>
   </section>
 
 </main>
 
 <!-- =========================
-     フッター
+     フッター（共通）
      ========================= -->
 <footer class="site-footer">
   <div class="footer-bar"></div>
@@ -87,18 +83,18 @@
   </p>
 </footer>
 
-
 <script>
-function checkPassword() {
-  const pw = document.getElementById("password").value;
-  const error = document.getElementById("error");
+  function checkPassword() {
+    const input = document.getElementById("password").value.trim();
+    const error = document.getElementById("error-message");
 
-  if (pw.toLowerCase() === "namie") {
-    window.location.href = "isaku-mail-list.html";
-  } else {
-    error.style.display = "block";
+    if (input === "namie") {
+      window.location.href = "isaku-mail-list.html";
+    } else {
+      error.textContent =
+        "認証に失敗しました。入力内容を再確認してください。";
+    }
   }
-}
 </script>
 
 </body>
