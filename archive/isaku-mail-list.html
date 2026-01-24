@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Isaku Enomoto｜Mailbox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- 検索専用CSS -->
+  <link rel="stylesheet" href="assets/css/search.css">
+</head>
+<body>
+
+<!-- =========================
+     ナビバー（共通）
+     ========================= -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html">
+      <img src="assets/img/logo.png" class="nav-logo" alt="ARAロゴ">
+    </a>
+  </div>
+
+  <nav class="nav-center">
+    <a href="index.html">ホーム</a>
+    <a href="staff.html">職員照会</a>
+    <a href="archive.html">アーカイブ</a>
+    <a href="individual.html">マイページ</a>
+  </nav>
+
+  <div class="nav-right">
+    <input type="search" class="nav-search" placeholder="検索">
+  </div>
+</header>
+
+<!-- =========================
+     メイン（メール一覧）
+     ========================= -->
+<main class="page">
+
+  <section style="max-width:900px;margin:120px auto 0;">
+
+    <h1 style="font-size:18px;margin-bottom:24px;letter-spacing:0.08em;">
+      受信トレイ
+    </h1>
+
+    <table class="mail-table" style="width:100%;border-collapse:collapse;">
+
+      <!-- Amber -->
+      <tr class="mail-row important"
+          onclick="location.href='mail-isaku-to-amber.html'">
+        <td style="width:220px;">
+          Amber Yates
+        </td>
+        <td>
+          <strong>相談したいことがある</strong><br>
+          他の者には知られたくない。
+        </td>
+        <td style="width:120px;">
+          5/2 23:48
+        </td>
+      </tr>
+
+      <!-- Dustin -->
+      <tr class="mail-row important"
+          onclick="location.href='mail-isaku-to-dustin.html'">
+        <td>
+          Dustin McMahon
+        </td>
+        <td>
+          <strong>2階エレベーターの運用について</strong><br>
+          念のため、時間を指定する。
+        </td>
+        <td>
+          5/3 00:12
+        </td>
+      </tr>
+
+    </table>
+
+  </section>
+
+</main>
+
+<!-- =========================
+     フッター
+     ========================= -->
+<footer class="footer" style="margin-top:120px;">
+  <p>ARA Internal Mail System / Restricted Access</p>
+</footer>
+
+</body>
+</html>
