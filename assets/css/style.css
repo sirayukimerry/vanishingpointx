@@ -740,45 +740,43 @@ body.lock-scroll {
   margin-top: 40px;
 }
 
-/* スマホ・タブレット対応 */
+/* =========================
+   ナビバー：スマホ対応
+   ========================= */
 @media (max-width: 768px) {
-  .nav-left, .nav-center, .nav-right {
+
+  .navbar {
+    flex-wrap: wrap;          /* 折り返しを許可 */
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-left {
     width: 100%;
-    text-align: center;
-    margin-bottom: 5px;
+    justify-content: center;  /* ロゴ中央寄せ */
+    margin-bottom: 0.5rem;
   }
 
-  .nav-right input.nav-search {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  .document-title {
-    font-size: 1.6em;
-  }
-
-  .document-section h2 {
-    font-size: 1.2em;
-  }
-
-  .end-button-group {
-    gap: 10px;
-  }
-
-  .end-button {
-    width: 45%;
-    font-size: 0.9em;
-    padding: 8px 10px;
-  }
-
-  .end-button img {
-    width: 70px;
-  }
-}
-
-@media (max-width: 480px) {
-  .end-button {
+  .nav-center {
     width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-center a {
+    font-size: 0.9rem;
+  }
+
+  .nav-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .nav-search {
+    width: 100%;
+    max-width: 280px;
   }
 }
 
