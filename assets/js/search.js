@@ -22,6 +22,6 @@ const SEARCH_DOCUMENTS = [
   { id: "17", title: "ARA寮センター廃棄物ログ", keywords: ["寮", "センター"] , url: "archive/waste-log.html" },
   { id: "18", title: "凶器所見", keywords: ["凶器", "果物ナイフ","包丁","アイスピック","のこぎり"] , url: "archive/weapon-report.html" },
   { id: "19", title: "館の監視体制", keywords: ["管理小屋"] , url: "archive/security-system.html" },
-  { id: "20", title: "破棄済み資料管理ログ", keywords: ["りんご"] , url: "archive/disposed-log.html" }
+  { id: "20", title: "破棄済み資料管理ログ", keywords: ["りんご"] , url: "archive/disposed-log.html" },
   { id: "??", title: "エデンの林檎計画", keywords: ["エデン", "エデン計画"] , url: "archive/edenapple.html" }
 ];
