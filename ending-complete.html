@@ -5,107 +5,203 @@
   <title>消失点X｜調査完了</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .ending-complete {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 20px;
-      font-family: "Yu Gothic UI", sans-serif;
-      line-height: 1.8;
-      color: #111;
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
     }
 
-    .ending-complete img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto 30px auto;
-      border: 2px solid #111;
-      border-radius: 8px;
-    }
-
-    .ending-complete h1 {
+    .page-title {
       text-align: center;
-      font-size: 2em;
-      margin-bottom: 30px;
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
 
-    .ending-complete p {
-      margin: 16px 0;
+    .ending-image {
+      display: block;
+      max-width: 400px;
+      margin: 0 auto 2rem;
+    }
+
+    .share-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .share-buttons-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .share-button-item {
+      position: relative;
     }
 
     .share-button {
       display: inline-block;
-      margin: 20px 0;
-      padding: 10px 20px;
+      padding: 0.6rem 1rem;
       background-color: #1da1f2;
       color: #fff;
-      font-weight: bold;
-      text-decoration: none;
       border-radius: 5px;
-      transition: background 0.3s;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s;
     }
 
     .share-button:hover {
-      background-color: #0d8ddb;
+      background-color: #0d95e8;
+    }
+
+    .share-preview {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .share-preview img {
+      max-width: 200px;
+      max-height: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: none;
+      transition: transform 0.2s;
+    }
+
+    .share-preview img:hover {
+      transform: scale(1.05);
     }
 
     .credits {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #444;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    .credits h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .credits a {
-      color: #111;
-      text-decoration: underline;
+      color: #1da1f2;
+      text-decoration: none;
     }
 
     .credits a:hover {
-      color: #c00;
+      text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
 
+  <h1 class="page-title">マーダーミステリー×ARG「消失点X」調査完了</h1>
 
+  <!-- メイン画像 -->
+  <img src="assets/img/vanishingpointx.png" alt="消失点X" class="ending-image">
 
-<main class="page ending-complete">
+  <p style="text-align:center; font-weight:bold;">
+    マーダーミステリー×ARG「消失点X」はこれにてエンディングを迎えました。<br>
+    遊んでいただき、ありがとうございました。
+  </p>
 
-  <h1>調査完了｜消失点X</h1>
+  <p style="text-align:center;">
+    よろしければ、感想を＃消失点Xでつぶやいていただけると、製作者の励みになります！
+  </p>
 
-  <img src="assets/img/vanishingpointx.png" alt="消失点Xイメージ">
+  <!-- Xシェアボタン -->
+  <section class="share-section">
+    <h2>エンディングをXで共有しよう！</h2>
 
-  <p>マーダーミステリー×ARG「消失点X」はこれにてエンディングを迎えました。遊んでいただき、ありがとうございました。</p>
+    <div class="share-buttons-wrapper">
+      <!-- 1. 遊んだよ -->
+      <div class="share-button-item" data-img="">
+        <a class="share-button" href="https://x.com/intent/tweet?text=マーダーミステリー×ARG「消失点X」を遊んだよ！%20%23消失点X" target="_blank">
+          遊んだよ！
+        </a>
+      </div>
 
-  <p>よろしければ、感想を＃消失点Xでつぶやいていただけると、製作者の励みになります！</p>
+      <!-- 2. #メティス -->
+      <div class="share-button-item" data-img="assets/img/metis_complete.png">
+        <a class="share-button" href="https://x.com/intent/tweet?text=マーダーミステリー×ARG「消失点X」を%23メティスで通過しました！%20%23消失点X%0Ahttps://sirayukimerry.github.io/vanishingpointx/assets/img/metis_complete.png" target="_blank">
+          #メティスで通過
+        </a>
+      </div>
 
-  <a class="share-button" href="https://x.com/intent/tweet?text=マーダーミステリー×ARG「消失点X」を遊びました！%20%23消失点X" target="_blank">X（旧Twitter）で共有</a>
+      <!-- 3. #アイトネ -->
+      <div class="share-button-item" data-img="assets/img/aitone_complete.png">
+        <a class="share-button" href="https://x.com/intent/tweet?text=マーダーミステリー×ARG「消失点X」を%23アイトネで通過しました！%20%23消失点X%0Ahttps://sirayukimerry.github.io/vanishingpointx/assets/img/aitone_complete.png" target="_blank">
+          #アイトネで通過
+        </a>
+      </div>
 
-  <div class="credits">
-    <p><strong>◆製作者</strong><br>白雪メリー</p>
+      <!-- 4. #レダ -->
+      <div class="share-button-item" data-img="assets/img/leda_complete.png">
+        <a class="share-button" href="https://x.com/intent/tweet?text=マーダーミステリー×ARG「消失点X」を%23レダで通過しました！%20%23消失点X%0Ahttps://sirayukimerry.github.io/vanishingpointx/assets/img/leda_complete.png" target="_blank">
+          #レダで通過
+        </a>
+      </div>
+    </div>
 
-    <p><strong>◆クレジット（敬称略）</strong></p>
-    <p>〇キャラクター立ち絵<br>
-    <a href="https://tatie.pages.dev/" target="_blank">onlooker 現代日本NPC用立ち絵</a></p>
+    <!-- プレビュー -->
+    <div class="share-preview">
+      <img id="preview-img" src="" alt="プレビュー">
+    </div>
+  </section>
 
-    <p>〇その他画像<br>
-    <a href="https://www.pakutaso.com/" target="_blank">ぱくたそ</a><br>
-    <a href="https://sozaino.site/f/" target="_blank">OKUMONO</a><br>
-    <a href="https://icooon-mono.com" target="_blank">Icooon Mono</a></p>
+  <!-- クレジット -->
+  <section class="credits">
+    <h3>◆製作者</h3>
+    <p>白雪メリー</p>
 
-    <p>〇インスパイア元<br>
-    <a href="http://scp-jp.wikidot.com/" target="_blank">SCP財団</a><br>
-    <a href="https://www.daiyonkyokai.net/" target="_blank">第四境界</a><br>
-    <a href="https://www.sim3.net/" target="_blank">SIM3</a></p>
-  </div>
+    <h3>◆クレジット（敬称略）</h3>
+    <p>
+      〇キャラクター立ち絵<br>
+      onlooker 現代日本NPC用立ち絵<br>
+      <a href="https://tatie.pages.dev/" target="_blank">https://tatie.pages.dev/</a>
+    </p>
+    <p>
+      〇その他画像<br>
+      ぱくたそ<br>
+      <a href="https://www.pakutaso.com/" target="_blank">https://www.pakutaso.com/</a><br>
+      OKUMONO<br>
+      <a href="https://sozaino.site/f/" target="_blank">https://sozaino.site/f/</a><br>
+      Icooon Mono<br>
+      <a href="https://icooon-mono.com" target="_blank">https://icooon-mono.com</a>
+    </p>
+    <p>
+      〇インスパイア元<br>
+      SCP財団<br>
+      <a href="http://scp-jp.wikidot.com/" target="_blank">http://scp-jp.wikidot.com/</a><br>
+      第四境界<br>
+      <a href="https://www.daiyonkyokai.net/" target="_blank">https://www.daiyonkyokai.net/</a><br>
+      SIM3<br>
+      <a href="https://www.sim3.net/" target="_blank">https://www.sim3.net/</a>
+    </p>
+  </section>
 
-</main>
-
-<footer class="site-footer">
-  <p class="footer-note">このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</p>
-  <p class="footer-copy">©2026　白雪メリー</p>
-</footer>
+  <!-- =========================
+       JS：プレビュー切替
+       ========================= -->
+  <script>
+    const previewImg = document.getElementById('preview-img');
+    document.querySelectorAll('.share-button-item').forEach(item => {
+      const imgSrc = item.getAttribute('data-img');
+      item.addEventListener('mouseenter', () => {
+        if(imgSrc) {
+          previewImg.src = imgSrc;
+          previewImg.style.display = 'inline-block';
+        } else {
+          previewImg.style.display = 'none';
+        }
+      });
+      item.addEventListener('mouseleave', () => {
+        previewImg.style.display = 'none';
+      });
+    });
+  </script>
 
 </body>
 </html>
