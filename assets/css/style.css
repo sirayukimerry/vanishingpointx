@@ -566,6 +566,12 @@
   letter-spacing: 0.16em;
 }
 
+/* 文字の強調 */
+.highlight {
+  text-decoration: underline; /* 黒の下線 */
+  font-weight: bold;           /* 文字を太くして目立たせる */
+}
+
 /* =========================
    査定事項だけ区切り線なし
    ========================= */
