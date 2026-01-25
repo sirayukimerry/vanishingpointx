@@ -9,6 +9,35 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <!-- 検索限定CSS -->
   <link rel="stylesheet" href="../assets/css/search.css">
+
+  <style>
+    /* 特殊演出用 */
+    #eden-effect {
+      display: block;
+      font-weight: bold;
+      line-height: 1.5;
+      color: darkred;
+      margin-top: 1em;
+    }
+
+    .char {
+      display: inline-block;
+      color: darkred;
+      animation: flicker 1s infinite, shake 0.5s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { color: darkred; }
+      50% { color: crimson; }
+    }
+
+    @keyframes shake {
+      0%,100% { transform: translate(0,0); }
+      25% { transform: translate(-1px,1px); }
+      50% { transform: translate(1px,-1px); }
+      75% { transform: translate(-1px,1px); }
+    }
+  </style>
 </head>
 
 <body class="search-mode">
@@ -47,23 +76,11 @@
     <p class="archive-text">
       ARAとコロニーのさらなる発展を願い、アノマリーを生成・作り替えることを目的としている。<br>
       B等級の信頼できる職員のみがこの任務に当たる。<br>
-      よってそれ以下の等級の職員がこの任務に関与していることはない。<br><br>
-
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
-      あなたが関与していることはないので、この資料の閲覧を中断しなさい。<br>
+      よってそれ以下の等級の職員がこの任務に関与していることはない。
     </p>
 
-    <p class="archive-note">
-      ※ この資料は機密扱いであり、あなたは見てはいけません。
-    </p>
+    <!-- 特殊演出テキスト -->
+    <p id="eden-effect"></p>
 
   </article>
 
@@ -74,3 +91,29 @@
   <p class="footer-note">
     このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。
   </p>
+  <p class="footer-copy">
+    ©2026　白雪メリー
+  </p>
+</footer>
+
+<script>
+  const text = "あなたが関与していることはないので、この資料の閲覧を中断しなさい。\n".repeat(10);
+  const container = document.getElementById("eden-effect");
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      const charSpan = document.createElement("span");
+      charSpan.className = "char";
+      charSpan.textContent = text.charAt(i);
+      container.appendChild(charSpan);
+      i++;
+      setTimeout(typeWriter, 30 + Math.random() * 80); // ランダム感
+    }
+  }
+
+  window.onload = typeWriter;
+</script>
+
+</body>
+</html>
