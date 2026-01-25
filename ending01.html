@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>エンディング01｜アノマリー完全破壊</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ページ独自の演出 */
+    .ending-page {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.8;
+      font-family: "Yu Gothic UI", sans-serif;
+    }
+
+    .ending-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #111;
+      padding-bottom: 10px;
+    }
+
+    .ending-section p {
+      margin: 16px 0;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .ending-section p:nth-child(1) { animation-delay: 0.3s; }
+    .ending-section p:nth-child(2) { animation-delay: 1s; }
+    .ending-section p:nth-child(3) { animation-delay: 1.7s; }
+    .ending-section p:nth-child(4) { animation-delay: 2.4s; }
+    .ending-section p:nth-child(5) { animation-delay: 3.1s; }
+    .ending-section p:nth-child(6) { animation-delay: 3.8s; }
+    .ending-section p:nth-child(7) { animation-delay: 4.5s; }
+    .ending-section p:nth-child(8) { animation-delay: 5.2s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* 最後のリンク演出 */
+    .ending-link {
+      display: block;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+      color: #111;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .ending-link:hover {
+      color: #c00;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <a href="ara.html"><img src="assets/img/logo.png" alt="ARAロゴ" class="nav-logo"></a>
+  </div>
+  <nav class="nav-center">
+    <a href="index.html">ホーム</a>
+    <a href="staff.html">職員照会</a>
+    <a href="archive.html">アーカイブ</a>
+    <a href="individual.html">マイページ</a>
+  </nav>
+  <div class="nav-right">
+    <input type="search" class="nav-search" placeholder="検索" onkeydown="if(event.key==='Enter'){location.href='search.html?q='+this.value}">
+  </div>
+</header>
+
+<main class="page ending-page">
+
+  <h1 class="ending-title">【アノマリー完全破壊】</h1>
+
+  <section class="ending-section">
+    <p>最終処理結果：承認</p>
+    <p>本報告を受理した上で、当機関は当該アノマリーの完全破壊を実施した。</p>
+    <p>当該存在は、複数名の精神状態および判断能力に深刻な影響を与えていた可能性が高く、即時的なリスク排除を最優先事項と判断した。</p>
+    <p>破壊処理は計画通り完了し、現在、当該アノマリーは確認されていない。</p>
+    <p>ただし、本件に関する詳細な挙動、および人間との相互作用については、十分な解析を行う前に失われた。</p>
+    <p>本判断は、「これ以上の犠牲を出さない」という一点において妥当である。</p>
+    <p>一方で、同種事案が再発した場合、当機関は再び同じ判断を下せるとは限らない。</p>
+    <p>本件は終結した。しかし、理解されたとは言い難い。</p>
+  </section>
+
+  <a class="ending-link" href="ending-complete.html">調査完了ページへ進む →</a>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-note">このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</p>
+  <p class="footer-copy">©2026　白雪メリー</p>
+</footer>
+
+</body>
+</html>
