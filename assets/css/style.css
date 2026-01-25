@@ -777,7 +777,19 @@ body.lock-scroll {
     max-width: 320px;
   }
 }
-
+/* =========================
+   スマホ：fixedヘッダー分の余白調整
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    padding-top: 160px; /* ← ヘッダー全体分 */
+  }
+}
+@media (max-width: 768px) {
+  .page {
+    padding-top: 16px;
+  }
+}
 
 /* =========================
    本文
