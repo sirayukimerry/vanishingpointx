@@ -81,6 +81,22 @@
   color: #000;
   text-shadow: 0 0 6px rgba(0,0,0,0.25);
 }
+/* =========================
+   メディアクエリ（スマホ調整）
+   ========================= */
+@media (max-width: 600px) {
+  .nav-center {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  .nav-right {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .nav-search {
+    max-width: 100%;
+  }
+}
 
 /* =========================
    検索窓（黒背景）
