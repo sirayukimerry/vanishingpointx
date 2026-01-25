@@ -778,16 +778,15 @@ body.lock-scroll {
   }
 }
 /* =========================
-   スマホ：fixedヘッダー分の余白調整
+   スマホではヘッダーを固定しない
    ========================= */
 @media (max-width: 768px) {
-  body {
-    padding-top: 160px; /* ← ヘッダー全体分 */
+  .navbar {
+    position: static;   /* ← fixed を解除 */
   }
-}
-@media (max-width: 768px) {
-  .page {
-    padding-top: 16px;
+
+  body {
+    padding-top: 0;     /* ← 余白不要になる */
   }
 }
 
