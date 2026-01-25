@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>エンディング03｜判断保留／上層部預かり</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ページ独自の演出 */
+    .ending-page {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.8;
+      font-family: "Yu Gothic UI", sans-serif;
+    }
+
+    .ending-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #111;
+      padding-bottom: 10px;
+    }
+
+    .ending-section p {
+      margin: 16px 0;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .ending-section p:nth-child(1) { animation-delay: 0.3s; }
+    .ending-section p:nth-child(2) { animation-delay: 1s; }
+    .ending-section p:nth-child(3) { animation-delay: 1.7s; }
+    .ending-section p:nth-child(4) { animation-delay: 2.4s; }
+    .ending-section p:nth-child(5) { animation-delay: 3.1s; }
+    .ending-section p:nth-child(6) { animation-delay: 3.8s; }
+    .ending-section p:nth-child(7) { animation-delay: 4.5s; }
+    .ending-section p:nth-child(8) { animation-delay: 5.2s; }
+    .ending-section p:nth-child(9) { animation-delay: 5.9s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* 最後のリンク演出 */
+    .ending-link {
+      display: block;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+      color: #111;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .ending-link:hover {
+      color: #c00;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <a href="ara.html"><img src="assets/img/logo.png" alt="ARAロゴ" class="nav-logo"></a>
+  </div>
+  <nav class="nav-center">
+    <a href="index.html">ホーム</a>
+    <a href="staff.html">職員照会</a>
+    <a href="archive.html">アーカイブ</a>
+    <a href="individual.html">マイページ</a>
+  </nav>
+  <div class="nav-right">
+    <input type="search" class="nav-search" placeholder="検索" onkeydown="if(event.key==='Enter'){location.href='search.html?q='+this.value}">
+  </div>
+</header>
+
+<main class="page ending-page">
+
+  <h1 class="ending-title">【判断保留／上層部預かり】</h1>
+
+  <section class="ending-section">
+    <p>最終処理結果：保留</p>
+    <p>本報告は受理されたが、当該アノマリーに関する最終判断は上層部の決裁待ちとなった。</p>
+    <p>情報は不十分であり、複数の解釈が成立する以上、拙速な結論は避けるべきであると判断された。</p>
+    <p>当面の間、アノマリーは現状維持とし、追加調査を継続する。</p>
+    <p>この選択は、最も安全であり、同時に最も危険でもある。</p>
+    <p>なぜなら、何も決めなかったという事実は、次の判断を誰かに委ねるからだ。</p>
+    <p>本件は未解決である。そして、その責任は今も残っている。</p>
+  </section>
+
+  <a class="ending-link" href="ending-complete.html">調査完了ページへ進む →</a>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-note">このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</p>
+  <p class="footer-copy">©2026　白雪メリー</p>
+</footer>
+
+</body>
+</html>
